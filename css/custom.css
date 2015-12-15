@@ -1,0 +1,12 @@
+.logo {
+    width: 36px;
+    height: 20px;
+    float: left;
+}
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 36px;
+        height: 20px;
+        float: left;
+    }
+}
