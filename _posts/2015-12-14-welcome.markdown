@@ -1,0 +1,15 @@
+---
+layout:     post
+title:      "Welcome to the Eternity Wall blog"
+subtitle:   "because not everything is short and eternal"
+author:     "Riccardo"
+---
+
+This is the first post of the official Eternity Wall blog.
+
+We are gonna use this channel mainly for:
+
+* `not-strictly-eternal` `longer-than-72-characters` important communication.
+* Mentioning Eternity Wall messages that use the wall in interesting way.
+* New sites that use and spread the Eternity Wall [base protocol](http://eternitywall.it/api)
+* Citing press mentions
