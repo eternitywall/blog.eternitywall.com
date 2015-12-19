@@ -6,7 +6,7 @@ description: "Eternity Wall official blog"
 
 This is the official blog of [Eternity Wall](http://eternitywall.it).
 
-We are gonna comment and give important news about the service on the page of this blog. You can contact us at anything @eternitywall.it
+We are gonna comment and give important news about the service on the page of this blog. You can send us an email, at anything @eternitywall.it
 
 
 If you want to receive most important news directly in your inbox, subscribe:
