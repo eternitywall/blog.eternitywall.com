@@ -11,6 +11,7 @@ author:     "Riccardo"
 </a>
 </div>
 
+We are proud to announce [Eternity Wall](http://eternitywall.it) now supports signed messages!
 Because anonymity is an highly desirable option, but you could want to have verifiable credit for what you write. You could use a nickname or your real life name, the important thing is that no one could write with your name.
 It’s not an account in a traditional way, actually, you are not registering in any particular server and you are not asking anyone permission. No one could freeze or delete your account. You don’t even care about a single service provider because all the information is stored in the public blockchain. Like the message itself, everything remains decentralized, any other provider could potentially re-build a service like ours from the blockchain. Instead of fighting against we encourage third party to do so to increment diffusion and awareness of eternal messages!
 
