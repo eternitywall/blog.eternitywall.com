@@ -11,7 +11,7 @@ author:     "HostFat"
 # How to sign messages on Eternity Wall
 
 
-After the installation of the app, click the right tab <span style="color:red">(1)</span> and the the [CREATE] button <span style="color:red">(2)</span>
+After the installation of the [app](https://play.google.com/store/apps/details?id=it.eternitywall.eternitywall), click the right tab <span style="color:red">(1)</span> and the the [CREATE] button <span style="color:red">(2)</span>
 
 <img src="/img/ew_new_id_img/01.png" width="300"  class="center-block" />
 
