@@ -1,5 +1,4 @@
 ---
-published: 	false
 layout:     post
 title:      "How to sign messages on Eternity Wall"
 subtitle:   "Tutorial"
