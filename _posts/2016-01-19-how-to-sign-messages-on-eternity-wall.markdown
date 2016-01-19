@@ -18,17 +18,17 @@ After the installation of the app, click the right tab <span style="color:red">(
 
 ***
 
-<span style="color:red">3)</span> This is your passphrase. You have to save it in a secure place, and maybe have some backup copy.
+<span style="color:red">3)</span> By clicking the [REFRESH] button you will generate a new random passphrase and a new avatar. You can to as much as you want until you have find an avatar image that you like.
+
+<span style="color:red">4)</span> Protect your account and settings with a PIN
+
+<span style="color:red">5)</span> This is your "avatar", it changes according to your passphrase.
+
+<span style="color:red">6)</span> This is your passphrase. You have to save it in a secure place, and maybe have some backup copy.
 You will need it to restore your account. We don't save it on our server, so if you lose it, then you will not be able to restore your account.
 You can still find it on the "preferences" menu, but I repeat because it's important, it is only available locally.
 If you lose your phone, and you haven't a copy of your passphrase, than you have lost your account.
 
-
-<span style="color:red">4)</span> This is your "avatar", it changes according to your passphrase.
-
-<span style="color:red">5)</span> Protect your account and settings with a PIN
-
-<span style="color:red">6)</span> By clicking the [REFRESH] button you will generate a new random passphrase and a new avatar. You can to as much as you want until you have find an avatar image that you like.
 
 After you have choose your avatar, click the [CONFIRM] button.
 
