@@ -6,7 +6,7 @@ subtitle:   "Tutorial"
 author:     "HostFat"
 ---
 
-<img src="/img/ew_new_id_img/10.png" width="172" height="60" class="center-block" />
+<img src="/img/ew_new_id_img/10.png" width="172" class="center-block" />
 
 
 # How to sign messages on Eternity Wall
@@ -78,10 +78,14 @@ Click the ( + ) button in the <span style="color:red">red circle</span>.
 
 ***
 
-You can click on (7) to choose if you want to send with your nickname or in anonymous mode.
-After you wrote your message, just click [SEND] button (8).
+You can click on <span style="color:red">(7)</span> to choose if you want to send with your nickname or in anonymous mode.
+After you wrote your message, just click [SEND] button <span style="color:red">(8)</span>.
 You will need to enter your PIN.
 
 <img src="/img/ew_new_id_img/09.png" width="300" class="center-block" />
 
 ***
+
+Great! Now your message is part of the Blockchain revolution!
+
+<img src="/img/ew_new_id_img/11.png" width="300" class="center-block" />
