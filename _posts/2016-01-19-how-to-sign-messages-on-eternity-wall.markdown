@@ -85,6 +85,6 @@ You will need to enter your PIN.
 
 ***
 
-Great! Now your message is part of the Blockchain revolution!
+Great! Now [your message](http://eternitywall.it/m/1355b9364d7097c1138f72366208e996416e7a314031fbdc881e0bdfe2beede8) is part of the Blockchain revolution!
 
 <img src="/img/ew_new_id_img/11.png" width="300" class="center-block" />
