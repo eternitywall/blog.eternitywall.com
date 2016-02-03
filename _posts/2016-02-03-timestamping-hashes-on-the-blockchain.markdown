@@ -15,7 +15,7 @@ You can now hash documents and commit on the blockchain simply sending an email 
 </div>
 </h3>
 
-*An hash of a document in the blockchain is a proof of existence of the document in a certain point in time.*
+*A hash of a document in the blockchain is a proof of existence of the document in a certain point in time.*
 
 Beware that is feature is out in **Beta**, and there is one commitment per day.
 
