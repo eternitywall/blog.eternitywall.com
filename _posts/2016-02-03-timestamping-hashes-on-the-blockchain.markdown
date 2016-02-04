@@ -9,11 +9,11 @@ author:     "Riccardo"
 
 You can now hash documents and commit on the blockchain simply sending an email with attachments at:
 
-<h3>
+<h4>
 <div class="alert alert-info center-block text-center" role="alert">
   <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a class="alert-link" href="mailto:timestamp@eternitywall.it">timestamp@eternitywall.it</a>
 </div>
-</h3>
+</h4>
 
 *A hash of a document in the blockchain is a proof of existence of the document in a certain point in time.*
 
@@ -30,7 +30,7 @@ The network take care of data at the price of the network fee for including the 
 
 ### Hash of Data in the blockchain
 
-When you put a hash of some data in the blockchain you have a commitment of the data in the blockchain. Your data is timestamped only if you or someone you trust in keep the real data. You are losing indipendence, uncensorability and eternity.
+When you put a hash of some data in the blockchain you have a commitment of the data in the blockchain. Your data is timestamped only if you or someone you trust keeping the real data. You are losing indipendence, uncensorability and eternity.
 
 ### So, why not putting everything on the blockchain?
 
@@ -50,11 +50,11 @@ Eternity Wall is not storing the document after computing the hash. However atta
 
 ### Try it now, it's free :)
 
-<h3>
+<h4>
 <div class="alert alert-info center-block text-center" role="alert">
   <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a class="alert-link" href="mailto:timestamp@eternitywall.it">timestamp@eternitywall.it</a>
 </div>
-</h3>
+</h4>
 
 
 <br>
