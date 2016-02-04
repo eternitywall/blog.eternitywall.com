@@ -17,11 +17,11 @@ You can now hash documents and commit on the blockchain simply sending an email 
 
 *A hash of a document in the blockchain is a proof of existence of the document in a certain point in time.*
 
-Beware that is feature is out in **Beta**, and there is one commitment per day.
+Beware that this feature is out in **Beta**, and there is one commitment per day.
 
 ### Let me know the details
 
-At Eternity Wall we think putting hash of data in the blockchain and putting the data itself are two completely different things.
+At Eternity Wall we think putting hash of data in the blockchain and putting the data themselves are two completely different things.
 
 ### Data in the blockchain
 
@@ -30,11 +30,11 @@ The network take care of data at the price of the network fee for including the 
 
 ### Hash of Data in the blockchain
 
-When you put an hash of some data in the blockchain you have a commitment of the data in the blockchain. Your data is timestamped only if you or someone you trust keep the real data. You are losing indipendence, uncensorability and eternity.
+When you put a hash of some data in the blockchain you have a commitment of the data in the blockchain. Your data is timestamped only if you or someone you trust in keep the real data. You are losing indipendence, uncensorability and eternity.
 
 ### So, why not putting everything on the blockchain?
 
-Because the blockchain is expensive. Decentralization is hard, coming to consensus and mantaining the data structure require that network nodes use a lot of resources.
+Because the blockchain is expensive. Decentralization is a tough business, coming to consensus and mantaining the data structure require that network nodes use a lot of resources.
 
 ### Why timestamping hashes?
 
