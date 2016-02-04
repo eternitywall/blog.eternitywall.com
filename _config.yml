@@ -17,3 +17,8 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "page:num"
+
+
+github:
+  repo: https://github.com/RCasatta/ew-blog
+  editpost: https://github.com/RCasatta/ew-blog/edit/gh-pages/
