@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      "Timestamping hashes"
+title:      "Timestamping documents"
 subtitle:   "on the blockchain"
 author:     "Riccardo"
 ---
 
-## Timestamping hashes on the blockchain
+## Timestamping documents on the blockchain
 
 You can now hash documents and commit on the blockchain simply sending an email with attachments at:
 
