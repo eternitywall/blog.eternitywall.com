@@ -50,11 +50,16 @@ Eternity Wall is not storing the document after computing the hash. However atta
 
 ### Try it now, it's free :)
 
+<br>
 <h4>
 <div class="alert alert-info center-block text-center" role="alert">
   <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a class="alert-link" href="mailto:timestamp@eternitywall.it">timestamp@eternitywall.it</a>
 </div>
 </h4>
+<br>
 
+### Update 8 February 2016
+
+We are now offering an [API endpoint](http://eternitywall.it/api#auth) to commit hashes.
 
 <br>
