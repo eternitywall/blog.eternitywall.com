@@ -19,6 +19,14 @@ You can now hash documents and commit on the blockchain simply sending an email 
 
 Beware that this feature is out in **Beta**, and there is one commitment per day.
 
+### Update 8 February 2016
+
+We are now offering an [API endpoint](http://eternitywall.it/api#auth) to commit hashes.
+
+### Update 12 February 2016
+
+You can now use our [page](http://eternitywall.it/timestamp) to hash documents in your browser and upload only the hash to our servers. From this page you can also easily check if a document was previously timestamped on the blockchain.
+
 ### Let me know the details
 
 At Eternity Wall we think putting hash of data in the blockchain and putting the data themselves are two completely different things.
@@ -58,8 +66,6 @@ Eternity Wall is not storing the document after computing the hash. However atta
 </h4>
 <br>
 
-### Update 8 February 2016
 
-We are now offering an [API endpoint](http://eternitywall.it/api#auth) to commit hashes.
 
 <br>
