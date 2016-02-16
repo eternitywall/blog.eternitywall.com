@@ -46,6 +46,11 @@ Let's see what parameters means:
 
 `1454229991` is the date time information in unix format which translate to **Sun Jan 31 2016 09:46:31 GMT+0100**
 
+{% highlight shell %}
+$ date -jf "%s" 1454229991                  
+Sun Jan 31 00:46:31 PST 2016
+{% endhighlight %}
+
 ### Status
 
 `ok` is pretty straightforward, other possible results are `processing` which means the hash commitment was already requested but still not being written in the blockchain. The last possible result is `not found` when the hash was never seen before. In the latter case, you will be prompted if you want to notarize it.
