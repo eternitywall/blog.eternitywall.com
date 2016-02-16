@@ -98,3 +98,9 @@ where `Hash 2451` is the hash of the previous computation and `Hash 6e8d` is the
 `Hash 53a1 = reverse( Hash 0e48 )`
 
 where `Hash 0e48` is the hash of the previous computation and `Hash 53a1` is the merkle root. What was to be demonstrated.
+
+What are you waiting for? [Notarize documents](http://eternitywall.it/notarize) on Eternity Wall :)
+
+<a href="http://eternitywall.it/notarize">
+<img src="{{ site.baseurl }}/img/certificate-smaller.png" class="center-block" style="cursor:pointer">
+</a>
