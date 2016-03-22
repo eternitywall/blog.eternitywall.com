@@ -89,7 +89,7 @@ Now that we now know more about merkle trees we come back to our data. Our sibli
 `["4c822a3b88741e8e83e7b9a289ffc97ba5dbb330cfbbf0cf67b94776edad9dcd", "414c7dd644620431dfd2636c27aadb7c59845258ab0f1efb813857b9edc38e94", "6e8d8f6163ef68207d6432bd6b368e90fbac65d0068bdcaf6b227066694b1a34"]`
 
 My hash is `20c7ba9c57f653b7c079df5171c196f494a5446d684c1b26a63bc5fc3fa2e25e` which is the `sha256` of my document.
-The index `2` is representing the leaf position of my hash. The position is needed to understand the order of the hash in the concatenation. If I compute:
+The index `2` is representing the leaf position of my hash. The position is needed to understand the order of the hash in the concatenation, since the index `2` represent the third element (since index start from `0`) the hash will be concateneted in the first position. So I compute:
 
 `Hash 536b = hash2( Hash 20c7 + Hash 4c82 )`
 
@@ -97,7 +97,7 @@ Where `Hash 20c7` is the hash of my picture and `Hash 4c82` is the first sibling
 
 `Hash 2451 = hash2( Hash 414c + Hash 536b )`
 
-Where `Hash 414c` is the second sibling and `Hash 536b` is the hash of the previous computation.
+Where `Hash 414c` is the second sibling and `Hash 536b` is the hash of the previous computation. At this level my index is `1` (previous index divided by two) so the previous Hash is in the second position.
 
 `Hash 0e48 = hash2( Hash 2451 + Hash 6e8d )`
 
