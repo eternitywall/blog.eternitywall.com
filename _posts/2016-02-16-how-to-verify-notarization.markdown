@@ -57,7 +57,8 @@ Sun Jan 31 00:46:31 PST 2016
 
 ### txHash
 
-`bdbe9044539777f12cb6162f40e3aeb419ef1b2d3e9bd80d4a8c84f0a34d33c0` is the hash of the bitcoin transaction containing the root of the merkle tree representing the commitment in the blockchain. If you check on a block explorer [this transaction](https://blockchain.info/tx/bdbe9044539777f12cb6162f40e3aeb419ef1b2d3e9bd80d4a8c84f0a34d33c0), you will find the merkle root `53a1df014de8c698e25c1733aa2d3571e51f12b3578b268b318ac71af734480e` in the tx op_return output (before this data there is the EW tag which is `4557` in hex for this example and EWC `455753` for actual production transactions). 
+`bdbe9044539777f12cb6162f40e3aeb419ef1b2d3e9bd80d4a8c84f0a34d33c0` is the hash of the bitcoin transaction containing the root of the merkle tree representing the commitment in the blockchain. If you check on a block explorer [this transaction](https://blockchain.info/tx/bdbe9044539777f12cb6162f40e3aeb419ef1b2d3e9bd80d4a8c84f0a34d33c0), you will find the merkle root `53a1df014de8c698e25c1733aa2d3571e51f12b3578b268b318ac71af734480e` in the tx op_return output (before this data there is the EW tag which is `4557` in hex for this example and EWC `455753` for actual production transactions).
+
 But this is not yet the hash of my picture!
 
 ## Merkle Tree
