@@ -7,11 +7,11 @@ author:     "Riccardo"
 
 <img src="{{ site.baseurl }}/img/ledger-nano-solo-large.png" class="center-block" style="cursor:pointer">
 
-During the next ["Bitcoin Milano meetup"](https://www.facebook.com/bitcoinmi/?fref=ts), held  [here](https://www.google.it/maps/place/Via+Copernico,+38,+20125+Milano/@45.4906249,9.2027944,17z/data=!3m1!4b1!4m2!3m1!1s0x4786c6d9fcf763a5:0x79f0c478e822b1?hl=en) at 19:00 the 20th of April there will be a lottery with a [ledger wallet](https://www.ledgerwallet.com/products/1-ledger-nano) offered by [The Rock Trading](https://www.therocktrading.com/)!
+During the next ["Bitcoin Milano meetup"](https://www.facebook.com/bitcoinmi/?fref=ts), held  [here](https://www.google.it/maps/place/Via+Copernico,+38,+20125+Milano/@45.4906249,9.2027944,17z/data=!3m1!4b1!4m2!3m1!1s0x4786c6d9fcf763a5:0x79f0c478e822b1?hl=en) at 19:00 the 20th of April there will be a lottery with a prize consisting in a new [ledger wallet](https://www.ledgerwallet.com/products/1-ledger-nano) offered by [The Rock Trading](https://www.therocktrading.com/)!
 
 You can partecipate simply by sending a signed message on [Eternity Wall](http://eternitywall.it)!
 
-You need to reply [this message](http://eternitywall.it/m/08b233e253859d00bafc28e709580affbde620db689eee75c3e221e55bcc36a7), the transaction hash of the message represent your number and the first Bitcoin block mined after 21:30 will represent the drawing of the winning number.
+You need to reply to [this message](http://eternitywall.it/m/08b233e253859d00bafc28e709580affbde620db689eee75c3e221e55bcc36a7), the transaction hash of the message represent your number and the first Bitcoin block mined after 21:30 will represent the drawing of the winning number.
 
 The transaction with the hash nearest to the block hash is the winner. The nearest is calculated beginning from the end of the hashes.
 For example, the following are EW message hashes:
