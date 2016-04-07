@@ -11,7 +11,7 @@ During the next ["Bitcoin Milano meetup"](https://www.facebook.com/bitcoinmi/?fr
 
 You can partecipate simply by sending a signed message on [Eternity Wall](http://eternitywall.it)!
 
-You need to reply [this message](http://eternitywall.it), the transaction hash of the message represent your number and the first Bitcoin block mined after 21:30 will represent the drawing of the winning number.
+You need to reply [this message](http://eternitywall.it/m/08b233e253859d00bafc28e709580affbde620db689eee75c3e221e55bcc36a7), the transaction hash of the message represent your number and the first Bitcoin block mined after 21:30 will represent the drawing of the winning number.
 
 The transaction with the hash nearest to the block hash is the winner. The nearest is calculated beginning from the end of the hashes.
 For example, the following are EW message hashes:
@@ -28,5 +28,5 @@ The winning ticket is the number 2 because the last character `4` is the nearest
 
 Only the first message per account is eligible and you need to show the winning account on the Eternity Wall app during the evening to get the price.
 
-Of course, you also need the [app](http://eternitywall.it) to sign message!
-You can follow our [instruction](http://eternitywall.it) if you loose yourself during the alias registration
+Of course, you also need the [app](https://play.google.com/store/apps/details?id=it.eternitywall.eternitywall) to sign message!
+You can follow our [tutorial](http://blog.eternitywall.it/2016/01/19/how-to-sign-messages-on-eternity-wall/) if you loose yourself during the alias registration
