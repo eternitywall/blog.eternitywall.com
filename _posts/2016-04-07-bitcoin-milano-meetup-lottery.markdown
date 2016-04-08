@@ -30,3 +30,7 @@ Only the first message per account is eligible and you need to show the winning 
 
 Of course, you also need the [app](https://play.google.com/store/apps/details?id=it.eternitywall.eternitywall) to sign message!
 You can follow our [tutorial](http://blog.eternitywall.it/2016/01/19/how-to-sign-messages-on-eternity-wall/) if you loose yourself during the alias registration
+
+<div class="alert alert-danger" role="alert">
+  <strong>8 April update</strong><br>There was a bug preventing users from answering the lottery message, we just released version 1.0.34 fixing this bug. Should be soon available on the play store.
+</div>
