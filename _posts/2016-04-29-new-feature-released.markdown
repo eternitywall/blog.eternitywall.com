@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      "New feature released"
+title:      "New features released"
 subtitle:   "Short urls and customized referral link"
 author:     "Riccardo"
 ---
 
 
-We just released a couple of new interesting feature on Eternity Wall.
+We just released a couple of new interesting features on Eternity Wall.
 
 
 ### Short links
