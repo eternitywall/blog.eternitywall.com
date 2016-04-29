@@ -9,7 +9,7 @@ author:     "Riccardo"
 We just released a couple of new interesting feature on Eternity Wall.
 
 
-###Short links
+### Short links
 
 
 The first is the short url for message page, you can now share short links.
@@ -20,7 +20,7 @@ The first is the short url for message page, you can now share short links.
 Remember that the link need at least the first 8 characters of the transaction id to work.
 
 
-###Referral link containing customized message
+### Referral link containing customized message
 
 
 Some users requires custom message in the Eternity Wall pages they are linking to. For example in a qrcode they are generating for an exhibition or whatever.
