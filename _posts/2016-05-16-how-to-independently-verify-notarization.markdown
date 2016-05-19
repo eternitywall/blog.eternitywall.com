@@ -20,9 +20,8 @@ From today we provide also a stand-alone [page](http://riccardo.casatta.it/indep
 The page takes two input:
 
 * The document which has been notarized
-* The stamp provided by Eternity Wall once the notarization has been done.
-  * You can download it on the notarization page providing the original document or just its hash by following the "notarized" link in the green alert
-  * If you have notarized the document through your email, you have received it as attachment
+* The stamp provided by Eternity Wall once the notarization has been done (You can download it on the notarization page providing the original document or just its hash by following the "notarized" link in the green alert)
+
 
 After you click on the verify button the following checks are performed.
 
