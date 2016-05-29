@@ -10,7 +10,7 @@ Yesterday there were two ways to call our hash timestamping service.
 ### For humans
 
 The first is through the [notarize](http://eternitywall.it/notarize) page.
-The service is free, but to prevent spam you need to solve a captcha to use it. Without the captcha the service could be machine called multiple times causing a lot of backend costs. We simply can't afford that.
+The service is free, but you need to solve a captcha to prevent spam. Without captcha the service could be machine called multiple times causing a lot of backend costs. We simply can't afford that.
 
 ### For machines
 
