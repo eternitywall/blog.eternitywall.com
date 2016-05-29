@@ -5,7 +5,7 @@ subtitle:   "Without an account"
 author:     "Riccardo"
 ---
 
-As of yesterday there was two ways to call our hash timestamping service.
+Yesterday there were two ways to call our hash timestamping service.
 
 ### For humans
 
