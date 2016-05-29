@@ -23,9 +23,9 @@ If you clicked on the example call, you can see the `Unauthorized request` error
 Using the [21](https://21.co) platform we are proposing another way to consume the API, a way that is machine-callable but it is not necessary to have an account. How to prevent spam and request abuse? By paying bitcoin at every request.
 If you try to call this [endpoint](http://21.eternitywall.it/v1/hash?hash=44ee321219c5db38b31f876521ba950af4c347445de5e2366a45c1c1685e50aa) it will be presented the `Payment required` error, the `402` special http code.
 
-This response code was thought at the very beginning of the http protocol specification but none used it because we haven't a valid digital money yet. Until bitcoin.
+This response code was thought at the very beginning of the http protocol specification but none used it because we haven't a valid digital money yet, until bitcoin.
 
-By installing the 21 library (at the time of writing available on Mac and Ubuntu) you can purchase the endpoint with 100 satoshi (now $0.0005) with a command like this:
+By installing the 21 library (at the time of writing available on Mac and Ubuntu) you can purchase the endpoint with 100 satoshi (now $0.0005) with the following command:
 
 {% highlight shell %}
 21 buy http://21.eternitywall.it/v1/hash?hash=44ee321219c5db38b31f876521ba950af4c347445de5e2366a45c1c1685e50aa
