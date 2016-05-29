@@ -56,3 +56,5 @@ If you like this article and our endpoint, don't forget to rate it with the comm
 {% highlight shell %}
 21 rate JDl 5
 {% endhighlight %}
+
+Thanks!
