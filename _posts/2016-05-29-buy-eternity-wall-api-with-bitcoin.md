@@ -7,19 +7,19 @@ author:     "Riccardo"
 
 Yesterday there were two ways to call our hash timestamping service.
 
-### For humans
+### 1. For humans
 
 The first is through the [notarize](http://eternitywall.it/notarize) page.
 The service is free, but you need to solve a captcha to prevent spam. Without captcha the service could be machine called multiple times causing a lot of backend costs. We simply can't afford that.
 
-### For machines
+### 2. For machines
 
-The second is through the [authenticated api](http://eternitywall.it/api#auth) with a call like
-[this](http://eternitywall.it/v1/auth/hash/7f066dc8262610339d0407e8dfafc9216b20e35c421785a56b87f28c566d61da?account=1K9gCCHberw6s61H9HiD6D9FtzCgry1bj7&signature=HzBR7t4aZn8L0lMN5ZBbBNzPgz8yi8oZfEMCoJhoOic7Xdh/kxzGxQjDna6IW8JtUeO1Z6xLlrOt8ryjyuJbskw=&challenge=[challenge]).
-If you clicked on the example call, you can see the `Unauthorized request` error, because you need an Eternity Wall account and provide a valid signature to be able to call the authenticated api.
+The second is through the [authenticated api](http://eternitywall.it/api#auth). If you call this API with an
+[example request](http://eternitywall.it/v1/auth/hash/7f066dc8262610339d0407e8dfafc9216b20e35c421785a56b87f28c566d61da?account=1K9gCCHberw6s61H9HiD6D9FtzCgry1bj7&signature=HzBR7t4aZn8L0lMN5ZBbBNzPgz8yi8oZfEMCoJhoOic7Xdh/kxzGxQjDna6IW8JtUeO1Z6xLlrOt8ryjyuJbskw=&challenge=[challenge]) you get the `Unauthorized request` error because you need an Eternity Wall account and provide a valid signature to be able to call the authenticated api.
 
-### For bitcoin-enabled machines
+### 3. For bitcoin-enabled machines
 
+The third and new one way is for bitcoin-enabled machines.
 Using the [21](https://21.co) platform we are proposing another way to consume the API, a way that is machine-callable but it is not necessary to have an account. How to prevent spam and request abuse? By paying bitcoin at every request.
 If you try to call this [endpoint](http://21.eternitywall.it/v1/hash?hash=44ee321219c5db38b31f876521ba950af4c347445de5e2366a45c1c1685e50aa) it will be presented the `Payment required` error, the `402` special http code.
 
@@ -51,7 +51,7 @@ shasum -a 256 README.md
 
 Calling the API from the command line is mostly for testing, but you can easily integrate the api call in a [python program](http://21.eternitywall.it/client).
 
-If you like this article and our endpoint, don't forget to rate it with the command
+If you like this article and our API, don't forget to rate it with the command
 
 {% highlight shell %}
 21 rate JDl 5
