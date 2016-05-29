@@ -20,8 +20,9 @@ The second is through the [authenticated api](http://eternitywall.it/api#auth). 
 ### 3. For bitcoin-enabled machines
 
 The third and new one way is for bitcoin-enabled machines.
-Using the [21](https://21.co) platform we are proposing another way to consume the API, a way that is machine-callable but it is not necessary to have an account. How to prevent spam and request abuse? By paying bitcoin at every request.
-If you try to call this [endpoint](http://21.eternitywall.it/v1/hash?hash=44ee321219c5db38b31f876521ba950af4c347445de5e2366a45c1c1685e50aa) it will be presented the `Payment required` error, the `402` special http code.
+Using the [21](https://21.co) platform we are proposing another way to consume the API, a way that is machine-callable but it is not necessary to have an account.
+
+How to prevent spam and request abuse? By paying bitcoin at every request. If you try to call this [endpoint](http://21.eternitywall.it/v1/hash?hash=44ee321219c5db38b31f876521ba950af4c347445de5e2366a45c1c1685e50aa) it will be presented the `Payment required` error, the `402` special http code.
 
 This response code was thought at the very beginning of the http protocol specification but none used it because we haven't a valid digital money yet, until bitcoin.
 
