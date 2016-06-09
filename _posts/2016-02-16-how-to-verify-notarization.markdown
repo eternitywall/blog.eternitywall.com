@@ -79,7 +79,7 @@ If my Hash is 1-0, to derive the root I will need just the siblings Hash 1-1 and
 
 `Hash 1 = hash( Hash 1-0 + Hash 1-1 )`
 
-`Top Hash = hash( Hash 0 + A )`
+`Top Hash = hash( Hash 0 + 1 )`
 
 Why can't I just give all the tree leafs ? Because they are `N`, while the siblings are just `log N`. A proof of a very big merkle tree could be really compact.
 
