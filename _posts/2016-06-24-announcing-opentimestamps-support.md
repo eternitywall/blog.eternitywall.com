@@ -56,4 +56,4 @@ Getting this messages means the document has been timestamped in the bicoin bloc
 
 The actual verification is still cumbersome but we are hoping that a wider ecosystem support of the OpenTimestamps format will grant an easier verification process in the future.
 
-We are already working in this direction.
+We are already working in this direction to promote broader adoption of the standard. Stay tuned!
