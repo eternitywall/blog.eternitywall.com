@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Announcing OpenTimestamps support"
-subtitle:   "Full indipendent verification"
+subtitle:   "Full independent verification"
 author:     "Riccardo Casatta"
 ---
 
@@ -49,7 +49,7 @@ nano riccardo-casatta-profilo.jpg.ots # paste the clipboard content in this file
 INFO:root:Success! riccardo-casatta-profilo.jpg was created on or before 2016-01-31 09:46:31
 ```
 
-Getting this messages means the document has been timestamped in the bicoin blockchain on or before 2016-01-31 09:46:31
+Getting this messages means the document has been timestamped in the bitcoin blockchain on or before 2016-01-31 09:46:31
 
 
 ## Improvements
