@@ -7,6 +7,10 @@ author:     "Riccardo Casatta"
 
 # OpenTimestamps
 
+<div class="alert alert-warning" role="alert">
+  <strong>16 February update</strong><br> A new version of OpenTimestamps has been developed, this post could be outdated
+</div>
+
 <a href="{{ site.baseurl }}/img/mail-stamp-template.svg">
 <img src="{{ site.baseurl }}/img/mail-stamp-template.svg" alt="OpenTimestamps"  />
 </a>
@@ -15,13 +19,13 @@ author:     "Riccardo Casatta"
 
 Eternity Wall is making efforts towards allowing a fully independent timestamps verification.
 
-We already provided our users [instructions](http://blog.eternitywall.it/2016/02/16/how-to-verify-notarization/) and open-source [tools](/2016/05/16/how-to-independently-verify-notarization/) to verify our notarizations.
+We already provided our users [instructions](https://blog.eternitywall.it/2016/02/16/how-to-verify-notarization/) and open-source [tools](/2016/05/16/how-to-independently-verify-notarization/) to verify our notarizations.
 We would like to improve the auditability of our service by having an externally developed independent stamp verifier.
 
 ## OpenTimestamps discovery
 
 Peter Todd showed us his OpenTimestamps format during his recent [visit](https://petertodd.org/2016/talks-dex-arnhem-dev-workshop) in Milan.
-We immediately realized this was what we needed to create a trustworthy timestamping ecosystem. One of the best part of the format is flexibility, without changing the way Eternity Wall is stamping documents we added in ours stamps the OpenTimestamps format, under the `ots1` property as in this [example](http://eternitywall.it/v1/hash/20c7ba9c57f653b7c079df5171c196f494a5446d684c1b26a63bc5fc3fa2e25e).
+We immediately realized this was what we needed to create a trustworthy timestamping ecosystem. One of the best part of the format is flexibility, without changing the way Eternity Wall is stamping documents we added in ours stamps the OpenTimestamps format, under the `ots1` property as in this [example](https://eternitywall.it/v1/hash/20c7ba9c57f653b7c079df5171c196f494a5446d684c1b26a63bc5fc3fa2e25e).
 
 ## Basic Idea
 
@@ -34,13 +38,13 @@ We are using the bitcoin blockchain to prove the timestamping but the format is 
 
 The following are the steps you need to verify an Eternity Wall notarized document using [Peter's python tool](https://github.com/petertodd/python-opentimestamps). The tool needs a bitcoin node with a reachable RPC endpoint (basing on the settings in your `bitcoin.conf`).
 
-We are using the picture of this [example](http://blog.eternitywall.it/2016/02/16/how-to-verify-notarization/) as the document to prove. Get the [stamp](http://eternitywall.it/v1/hash/20c7ba9c57f653b7c079df5171c196f494a5446d684c1b26a63bc5fc3fa2e25e) data and copy in the clipboard the content of the `ots1` child in the json, you will need this data later.
+We are using the picture of this [example](https://blog.eternitywall.it/2016/02/16/how-to-verify-notarization/) as the document to prove. Get the [stamp](https://eternitywall.it/v1/hash/20c7ba9c57f653b7c079df5171c196f494a5446d684c1b26a63bc5fc3fa2e25e) data and copy in the clipboard the content of the `ots1` child in the json, you will need this data later.
 
 
 {% highlight shell %}
 git clone https://github.com/petertodd/python-opentimestamps
 cd python-opentimestamps
-wget http://blog.eternitywall.it/img/riccardo-casatta-profilo.jpg
+wget https://blog.eternitywall.it/img/riccardo-casatta-profilo.jpg
 nano riccardo-casatta-profilo.jpg.ots # paste the clipboard content in this file
 ./ots verify riccardo-casatta-profilo.jpg.ots
 {% endhighlight %}
