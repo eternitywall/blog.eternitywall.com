@@ -6,7 +6,7 @@ author:     "Riccardo Casatta"
 ---
 
 Eternity Wall works on the assumption of an immutable and decentralized blockchain.
-It's by leveraging this property that we can build useful new products for our users.
+It's by leveraging this properties that we can build useful new products for our users.
 Blockchains losing this kind of properties are no different from existing technologies and we are not interested in this field.
 
 We didn't even think to need to write this kind of statement but recently it looks a part of the network think can decide for all the partecipants and this is not the idea we have of Bitcoin. Eternity Wall will not consider the current Bitcoin Unlimited proposal to be the original Bitcoin cryptocurrency and even if there will be a BTU chain, we are not interested in building on top of it.
