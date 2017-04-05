@@ -22,3 +22,4 @@ We recommend interesting readings from other companies or individuals sharing si
 * [BitGo](https://blog.bitgo.com/bitgos-approach-to-handling-a-hard-fork-71e572506d7d)
 * [Bitrated](https://medium.com/@bitrated/bitrateds-position-on-network-splits-and-bitcoin-unlimited-4685c5c3f8e8)
 * [Canadian economic nodes](https://hackernoon.com/canadian-bitcoin-economic-nodes-unite-against-bitcoin-unlimited-412786fb4bb6)
+* [inbitcoin](https://www.facebook.com/notes/inbitcoin/and-what-if-the-hard-fork-happened-hard-what-getting-informed-on-an-unlikely-eve/1642579522437038)
