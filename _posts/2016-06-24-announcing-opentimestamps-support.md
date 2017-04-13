@@ -8,7 +8,9 @@ author:     "Riccardo Casatta"
 # OpenTimestamps
 
 <div class="alert alert-warning" role="alert">
-  <strong>16 February update</strong><br> A new version of OpenTimestamps has been developed, this post could be outdated
+  <strong>16 February update</strong><br> A new version of OpenTimestamps has been developed, this post could be outdated.
+  <br>
+  Consider visiting the <a href="https://opentimestamps.org">OpenTimestamps web site</a>
 </div>
 
 <a href="{{ site.baseurl }}/img/mail-stamp-template.svg">
