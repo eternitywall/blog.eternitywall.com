@@ -1,6 +1,6 @@
 # Site settings
 title: Eternity Wall Blog
-header-img: img/the-great-wall-of-china-291.jpg
+header-img: img/header-bg.jpg
 email: feedback@eternitywall.it
 description: "Eternity Wall, messages lasting forever. Posts a little less..."
 baseurl: ""
@@ -15,10 +15,51 @@ permalink: pretty
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate]
-paginate: 5
+paginate: 10
 paginate_path: "page:num"
 
 
 github:
   repo: https://github.com/RCasatta/ew-blog
   editpost: https://github.com/RCasatta/ew-blog/edit/gh-pages/
+
+
+authors:
+  riccardo.casatta:
+    name: Riccardo Casatta
+    display_name: Riccardo Casatta
+    email: riccardo@eternitywall.com
+    web: https://riccardo.casatta.it
+    twitter: RCasatta
+    github: RCasatta
+  hostfat:
+    name: Franco Cimatti
+    display_name: HostFat
+    email: hostfat@gmail.com
+    web: https://www.bitcoin-italia.org
+    twitter: HostFat
+    github: HostFat
+  federico.tenga:
+    name: Federico Tenga
+    display_name: Federico Tenga
+    twitter: FedericoTenga
+  valerio.vaccaro:
+    name: Valerio Vaccaro
+    display_name: Valerio Vaccaro
+    email: valerio.vaccaro@gmail.com
+    web: http://www.valeriovaccaro.it/
+    twitter: tulipan81
+    github: valerio-vaccaro
+  luca.vaccaro:
+    name: Luca Vaccaro
+    display_name: Luca Vaccaro
+    email: luca@eternitywall.com
+    twitter: lucavaccaro87
+    github: lvaccaro
+  peter.todd:
+    name: Peter Todd
+    display_name: Peter Todd
+    email: pete@petertodd.org
+    web: https://petertodd.org/
+    twitter: petertoddbtc
+    github: petertodd

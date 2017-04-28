@@ -2,7 +2,7 @@
 layout:     post
 title:      "How to sign messages on Eternity Wall"
 subtitle:   "Tutorial"
-author:     "HostFat"
+author:     "hostfat"
 ---
 
 <img src="/img/ew_new_id_img/10.png" width="172" class="center-block" />

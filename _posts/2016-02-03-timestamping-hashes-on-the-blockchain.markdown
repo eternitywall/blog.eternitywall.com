@@ -2,7 +2,7 @@
 layout:     post
 title:      "Timestamping documents"
 subtitle:   "on the blockchain"
-author:     "Riccardo"
+author:     "riccardo.casatta"
 ---
 
 ## Timestamping documents on the blockchain

@@ -2,7 +2,7 @@
 layout:     post
 title:      "Timestamping is the first non-monetary blockchain use case"
 subtitle:   "In the official response to ESMA"
-author:     "Riccardo Casatta"
+author:     "riccardo.casatta"
 ---
 
 ESMA (European Securities and Markets Authority) recently asked a [Consultation](https://www.esma.europa.eu/press-news/consultations/consultation-distributed-ledger-technology-applied-securities-markets) on the distributed ledger technology applied to securities markets.

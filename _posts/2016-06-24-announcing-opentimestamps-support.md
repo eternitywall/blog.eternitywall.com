@@ -2,7 +2,7 @@
 layout:     post
 title:      "Announcing OpenTimestamps support"
 subtitle:   "Full independent verification"
-author:     "Riccardo Casatta"
+author:     "riccardo.casatta"
 ---
 
 # OpenTimestamps

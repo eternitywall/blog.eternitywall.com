@@ -2,7 +2,7 @@
 layout:     post
 title:      "Welcome signed eternal message"
 subtitle:   "Nominal message are now public"
-author:     "Riccardo"
+author:     "riccardo.casatta"
 ---
 
 <div>

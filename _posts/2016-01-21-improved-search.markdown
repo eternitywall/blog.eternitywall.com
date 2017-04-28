@@ -2,7 +2,7 @@
 layout:     post
 title:      "Improved Search"
 subtitle:   "Find the message that you are searching"
-author:     "Riccardo"
+author:     "riccardo.casatta"
 ---
 
 Searching on Eternity wall is now improved. Having made available the signed message feature, you can now search for aliases. they are part of the text indexed, so that searching for [Eternity Wall](http://eternitywall.it/search?q=Eternity+Wall) returns all the posts written by the "Eternity Wall" account and those ones containing just the words.

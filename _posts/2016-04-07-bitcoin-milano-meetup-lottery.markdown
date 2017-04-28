@@ -2,7 +2,7 @@
 layout:     post
 title:      "Bitcoin Milano meetup lottery"
 subtitle:   "Win a Ledger Wallet"
-author:     "Riccardo"
+author:     "riccardo.casatta"
 ---
 
 <img src="{{ site.baseurl }}/img/ledger-nano-solo-large.png" class="center-block" style="cursor:pointer">
@@ -12,7 +12,7 @@ author:     "Riccardo"
 </div>
 
 <div class="alert alert-danger" role="alert">
-  <strong>7 July update</strong><br> <a href="http://eternitywall.it/m/14d1d3cb" class="alert-link">Last lottery</a> on EW! 
+  <strong>7 July update</strong><br> <a href="http://eternitywall.it/m/14d1d3cb" class="alert-link">Last lottery</a> on EW!
 </div>
 
 During the next ["Bitcoin Milano meetup"](https://www.facebook.com/bitcoinmi/?fref=ts), held  [here](https://www.google.it/maps/place/Via+Copernico,+38,+20125+Milano/@45.4906249,9.2027944,17z/data=!3m1!4b1!4m2!3m1!1s0x4786c6d9fcf763a5:0x79f0c478e822b1?hl=en) at 19:00 the 20th of April there will be a lottery with a prize consisting in a new [ledger wallet](https://www.ledgerwallet.com/products/1-ledger-nano) offered by [The Rock Trading](https://www.therocktrading.com/)!

@@ -2,7 +2,7 @@
 layout:     post
 title:      "How to manually verify notarization?"
 subtitle:   "Warning: technical content"
-author:     "Riccardo"
+author:     "riccardo.casatta"
 ---
 
 This is my actual profile picture:

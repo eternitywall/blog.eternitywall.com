@@ -2,7 +2,7 @@
 layout:     post
 title:      "Welcome to the Eternity Wall blog"
 subtitle:   "because not everything is short and eternal"
-author:     "Riccardo"
+author:     "riccardo.casatta"
 ---
 
 This is the first post of the official Eternity Wall blog.
