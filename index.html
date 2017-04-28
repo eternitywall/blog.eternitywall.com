@@ -1,6 +1,6 @@
 ---
 layout: page
-description: "Messages lasting forever, posts a little less..."
+
 ---
 
 {% for post in paginator.posts %}
@@ -25,7 +25,9 @@ description: "Messages lasting forever, posts a little less..."
     </p>
 
 </div>
+{% if forloop.last == false %}
 <hr>
+{% endif %}
 {% endfor %}
 
 <!-- Pager -->

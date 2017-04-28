@@ -25,6 +25,16 @@ a {
 a.inverted {
   color: white;
 }
+
+h1 > a.inverted {
+  text-decoration: none;
+}
+
+h1 > a.inverted:hover, h1 > a.inverted:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
 a:hover,
 a:focus {
   color: #0494f5;
