@@ -4,7 +4,7 @@ header-img: img/header-bg.jpg
 email: feedback@eternitywall.it
 description: "Eternity Wall, messages lasting forever. Posts a little less..."
 baseurl: ""
-url: "http://blog.eternitywall.it"
+url: "http://blog.eternitywall.com"
 twitter_username: eternitywall
 github_username:  RCasatta
 
@@ -20,8 +20,8 @@ paginate_path: "page:num"
 
 
 github:
-  repo: https://github.com/RCasatta/ew-blog
-  editpost: https://github.com/RCasatta/ew-blog/edit/gh-pages/
+  repo: https://github.com/eternitywall/blog.eternitywall.com
+  editpost: https://github.com/eternitywall/blog.eternitywall.com/edit/master/
 
 
 authors:
