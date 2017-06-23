@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenTimestamps performances"
-subtitle: ""
+subtitle: "It's fast enough"
 author: "valerio.vaccaro"
 ---
 
@@ -445,3 +445,6 @@ As we saw timestamping is __possible__ using transaction on blockchain using the
 
 - delay depends on the writing policy chosen (e.g. if you decide to write 4 times per day accept 12 hours granularity with acceptable fees) and
 - delay depends on the fee chosen, if very low you accept to have a less precise timestamp.
+
+
+A special thanks to Peter Todd and Riccardo Casatta for feedbacks and everyone who works on OpenTimestamps.
