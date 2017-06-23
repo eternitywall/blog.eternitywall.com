@@ -337,7 +337,7 @@ ggplot(dataLog_plot[dataLog_plot$blockchain=="BTC", ], aes(x=timeCreated, y=delt
 In this chart unfortunately we can see how some public server went down for maintenance/debugging activities generating long delays. Thanks to the architecture of OpenTimestamps this is not a big deal!
 Every timestamp request from the reference client is made to the 3 servers, what you really care of is the reply of the fastest one to write in the blockchain
 
-For this reason a we can plot just the minimum time for each timestamp, this is a good approximation of the time needed to publish a message. This is how OpenTimestamps protocol work, imagine to ask two servers (Alice and Bot) the same timestamp, the protocol return the timestamp of the minimal height block so, if Alice publish transaction before Bob, the protocol will return the timestamp on the block containing Alice's transaction.
+For this reason we can plot just the minimum time for each timestamp, this is a good approximation of the time needed to publish a message. This is how OpenTimestamps protocol work, imagine to ask two servers (Alice and Bot) the same timestamp, the protocol return the timestamp of the minimal height block so, if Alice publish transaction before Bob, the protocol will return the timestamp on the block containing Alice's transaction.
 
 We can plot it using a dataset summarized by digest like in the following chunk.
 
