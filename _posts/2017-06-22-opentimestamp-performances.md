@@ -5,6 +5,12 @@ subtitle: ""
 author: "valerio.vaccaro"
 ---
 
+# Executive Summary
+
+Is the Bitcoin Blockchain a good choiche for timestamping purposes? Some articles conclude that bitcoin can not be used for such applications due to the writing time needed for include a transaction in a valid block.
+
+In this article I will analize the OpenTimestamps protocol perfomances (using public available servers) and I will show how timestamping can work in a efficient and cheap way on the Bitcoin Blockchain.
+
 # Introduction
 
 Checking some articles online related with Bitcoin blockchain I found the *Blockchain Inefficiency in the Bitcoin Peers Network* from *Giuseppe Pappalardo, T. Di Matteo, Guido Caldarelli, Tomaso Aste* (you can find it on [arxiv](https://arxiv.org/abs/1704.01414)) that sound very pessimistic about the ability of the blockchain to support timestamping solutions.
