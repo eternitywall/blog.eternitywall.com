@@ -178,4 +178,6 @@ A very small UTXO could be insert in a transaction with 1 input and 1 *nulldata*
 
 For every signature one may sign several times to save some bytes. This will make the transaction smaller and hence cheaper, but in the end it is not worth the effort.
 
+We haven't found any signature smaller than 67 bytes, if you find one please comment down here!
+
 **Remark:** *Most signature algorithms use a deterministic nonce (with RFC6979) hence to generate new signatures you should modify how the signature is made. But this is very delicate and could lead to loss of funds, don't expose others to this risk*.
