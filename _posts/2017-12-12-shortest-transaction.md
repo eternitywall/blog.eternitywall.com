@@ -105,7 +105,7 @@ Generating multiple nonces doesn't have to be expensive, one can generate the fi
 **How much is likely to get a short signature?**
 
 In the following we will use an **approximation**: `order = 2**256`. It will make computations easier: with this apporximation `P(r < 2**255) = 1/2` while the true value is slightly above (since `r` cannot assume values in `[order..2**256-1]`).
-However this values are *extremely* close to the true results (computed [here]({{ site.baseurl }}/content/20171211_Exact_Probabilities)).
+However this values are *extremely* close to the true results (computed [here]({{ site.baseurl }}/content/20171212_Exact_Probabilities)).
 
 Compute the cumulative distribution:
 ```
