@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Create the shortest transaction"
-subtitle: "How much a transacion can be squeezed?"
+subtitle: "How much a transaction can be squeezed?"
 author: "leonardo.comandini"
 ---
 
@@ -17,7 +17,7 @@ There are some extremely short transactions (like [this](http://yogh.io/#tx:id:f
 Extract the transaction with `txid = 3419cbc51cec42d4f55d4147d0c1cef54fbdabddf4384270e6e93970b2496f74` from the blockchain and decode the raw transaction:
 
 ```
-$ decoderawtransaction 0200000001017a28f3d62d98803174bd1ba3827c62e4ccb28b4aa23aa5c7bec74301005f1b0000000044433040022002aedaad7897022be857509bbf753d5c05d6c20092cf5088413f31d6ff661f0b021c57e00a637102d8223360b6797d0bb33c2dfc4504c30d0c4ced29ddb301ffffffff010000000000000000016a00000000
+$ bitcoin-cli decoderawtransaction 0200000001017a28f3d62d98803174bd1ba3827c62e4ccb28b4aa23aa5c7bec74301005f1b0000000044433040022002aedaad7897022be857509bbf753d5c05d6c20092cf5088413f31d6ff661f0b021c57e00a637102d8223360b6797d0bb33c2dfc4504c30d0c4ced29ddb301ffffffff010000000000000000016a00000000
 {
   "txid": "3419cbc51cec42d4f55d4147d0c1cef54fbdabddf4384270e6e93970b2496f74",
   "hash": "3419cbc51cec42d4f55d4147d0c1cef54fbdabddf4384270e6e93970b2496f74",
@@ -82,7 +82,7 @@ The shortest possible standard **output** is a *nulldata* with nothing following
 
 ### Squeeze the signature
 
-DER encoded signatures haven't fixed length. Usually they are 73, 72 or 71 bytes long, however sometimes they could be shorter. 
+DER encoded signatures haven't fixed length. Usually they are 73, 72 or 71 bytes long, however sometimes they could be shorter.
 
 Reminding how a signature is encoded:
 
@@ -162,7 +162,7 @@ So if you have exceeding computational power you can sign several times, get a s
 
 **Is this worthy?**
 
-*Not really.* 
+*Not really.*
 
 There are some issues:
 
@@ -179,13 +179,3 @@ A very small UTXO could be insert in a transaction with 1 input and 1 *nulldata*
 For every signature one may sign several times to save some bytes. This will make the transaction smaller and hence cheaper, but in the end it is not worth the effort.
 
 **Remark:** *Most signature algorithms use a deterministic nonce (with RFC6979) hence to generate new signatures you should modify how the signature is made. But this is very delicate and could lead to loss of funds, don't expose others to this risk*.
-
-
-
-
-
-
-
-
-
-

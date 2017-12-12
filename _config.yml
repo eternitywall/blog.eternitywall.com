@@ -14,7 +14,7 @@ highlighter: rouge
 permalink: pretty
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate: 10
 paginate_path: "page:num"
 
@@ -63,3 +63,9 @@ authors:
     web: https://petertodd.org/
     twitter: petertoddbtc
     github: petertodd
+  leonardo.comandini:
+    name: Leonardo Comandini
+    display_name: Leonardo Comandini
+    email: leonardo@eternitywall.com
+    twitter: LeoComandini
+    github: LeoComandini

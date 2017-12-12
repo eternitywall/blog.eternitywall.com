@@ -9,7 +9,7 @@ layout: page
 {{ content }}
 <br><br>
 
-{{ assign total_posts = 0 }}
+{% assign total_posts = 0 %}
 {% for post in site.posts %}
     {% if post.author == page.author %}
         {% assign total_posts = total_posts | plus: 1 %}
