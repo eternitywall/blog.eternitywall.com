@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Create the shortest transaction
-subtitle: How much a transacion can be squeezed?
-author: leonardo.comandini
+title: "Create the shortest transaction"
+subtitle: "How much a transacion can be squeezed?"
+author: "leonardo.comandini"
 ---
 
 
