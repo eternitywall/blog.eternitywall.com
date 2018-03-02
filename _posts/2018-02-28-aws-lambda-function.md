@@ -6,8 +6,10 @@ author:     "luca.vaccaro"
 ---
 
 OpenTimestamps is an scalable, trustless, distributed protocol to timestamp files, documents and media on Bitcoin.
+
 There are available clients, documentations, tools and libraries in different languages, for more info look at [GitHub](https://github.com/opentimestamps). 
 Moreover (OpenTimestamps website](https://opentimestamps.org) provides free and easy methods to stamp and verify my documents.
+
 In this tutorial, I want to allow lazy people, as me, to automatically stamp documents in the cloud without any human interaction by using Amazon Lambda functions:
 when I transfer a file in my Amazon S3 cloud storage, the Lambda function stamps the document and stores the proof-file on the S3 itself.
 > Note: I suggest to run your own Amazon Lambda function, because you should not trust to any third-party service.
