@@ -14,6 +14,7 @@ In this tutorial, I want to allow lazy people, as me, to automatically stamp doc
 when I transfer a file in my Amazon S3 cloud storage, the Lambda function stamps the document and stores the proof-file on the S3 itself.
 > Note: Run your own Amazon Lambda function, because you should not trust to any third-party service.
 
+![Services]({{ site.baseurl }}/img/aws-lambda-functions/services.png)
 
 ### Why AWS Lambda?
 
