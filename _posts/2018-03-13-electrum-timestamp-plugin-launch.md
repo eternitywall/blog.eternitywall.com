@@ -124,17 +124,19 @@ to create your timestamps you need to wait to have the transaction is confirmed 
 
 After 6 blocks clicking on `upgrade` will do something, your timestamps are now completed.
 
-![]({{ site.baseurl }}/img/electrum-timestamp-plugin/.png)
+![post-upgrade]({{ site.baseurl }}/img/electrum-timestamp-plugin/post-upgrade.png)
 
 Your timestamp proofs are next to the file you timestamped.
 
-![]({{ site.baseurl }}/img/electrum-timestamp-plugin/.png)
+![files-and-proofs]({{ site.baseurl }}/img/electrum-timestamp-plugin/files-and-proofs.png)
 
 ## Verify your proofs
 
-Use the OpenTimestamps client or go on [opentimestamps.org](https://opentimestamps.org) to verify your proofs.
+Use the OpenTimestamps client (better) or go on [opentimestamps.org](https://opentimestamps.org) (suboptimal) to verify your proofs.
 
-![]({{ site.baseurl }}/img/electrum-timestamp-plugin/.png)
+![pre-verify]({{ site.baseurl }}/img/electrum-timestamp-plugin/pre-verify.png)
+
+![post-verify]({{ site.baseurl }}/img/electrum-timestamp-plugin/post-verify.png)
 
 # Conclusions
 
