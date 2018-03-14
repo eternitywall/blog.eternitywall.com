@@ -12,12 +12,12 @@ To do so you need to send a bitcoin transaction incluing some extra data which a
 Then for each file you should create a `.ots` receipt containing the proof linking the file to the merkle root in the block header, using the OpenTimestamps standard.
 
 This is not extremely easy to do, you should be familiar with the OpenTimestamps libraries and a software to create custom bitcoin transactions. 
-While trying you may fail, wasting some bytes in your transaction or even worse some of your your bitcoins.
+While trying you may fail, wasting some bytes in your transaction or even worse some of your bitcoins.
 But now there is an easy way: you can timestamp your files with your transactions using this Electrum plugin.
 
 ![electrum-meets-opentimestamps]({{ site.baseurl }}/img/electrum-timestamp-plugin/electrum-meets-opentimestamps.png)
 
-*Note:* creating a timestamp in this way (except in extremely particular cases) is the **dumb** way to do a timestamp. 
+*Note:* except for educational purposes or particular cases, creating a timestamp in this way is the **dumb** way to do a timestamp. 
 The smart way is using a public *calendar* service: it's cheaper, requires less efforts and burdens less on the network.
 
 # Getting started
@@ -31,7 +31,9 @@ In the next phases we will make some steps to provide a nicer user experience.
 To use the plugin you need to install a custom version of Electrum including the plugin.
 
 The instructions are adapted from [Electrum README](https://github.com/spesmilo/electrum#development-version)
-and it is assumed to run on Linux (for Mac OS X use `brew install` instead of `sudo apt-get install`).
+and it is assumed to run on Linux.
+
+(For Mac OS X use `brew install` instead of `sudo apt-get install`, instead of `python-pyqt5` and `pyqt5-dev-tools` install `pyqt5` and check that it is using `python3`. This should do the job.)
 
 Electrum is a pure python application. 
 If you want to use the Qt interface, install the Qt dependencies:
@@ -111,6 +113,8 @@ Confirm the changes in the transaction
 
 Sign and broadcast the transaction (click on `Sign`, then `Broadcast`)
 
+*Note:* the hash value in the red box is the Merkle root resulting from the hashes of the files along with nonces to guarantee extra privacy. 
+
 ## Check the timestamps history
 
 Click on `Tools -> Timestamps…`, the file now is an pending state.
@@ -132,7 +136,7 @@ Your timestamp proofs are next to the file you timestamped.
 
 ## Verify your proofs
 
-Use the OpenTimestamps client (better) or go on [opentimestamps.org](https://opentimestamps.org) (suboptimal) to verify your proofs.
+Use the OpenTimestamps client (better) or go on [opentimestamps.org](https://opentimestamps.org) (suboptimal, you are trusting the website) to verify your proofs.
 
 ![pre-verify]({{ site.baseurl }}/img/electrum-timestamp-plugin/pre-verify.png)
 
