@@ -7,7 +7,7 @@ author:     "luca.vaccaro"
 
 OpenTimestamps is a standard format for blockchain timestamping.
 
-The official implementation is written in [Python by Peter Todd](https://github.com/opentimestamps/python-opentimestamps), and porting in different languages: [javascript](https://github.com/opentimestamps/javascript-opentimestamps), [java](https://github.com/opentimestamps/java-opentimestamps), [rust](https://github.com/opentimestamps/rust-opentimestamps).
+The official implementation is written in [Python by Peter Todd](https://github.com/opentimestamps/python-opentimestamps), and there are libraries in different languages: [javascript](https://github.com/opentimestamps/javascript-opentimestamps), [java](https://github.com/opentimestamps/java-opentimestamps), [rust](https://github.com/opentimestamps/rust-opentimestamps).
 
 Opentimestamps javascript library is written for nodejs and [npm package](https://www.npmjs.com/package/javascript-opentimestamps) is publicly available. OpenTimestamps library could be used also on client side, for more details check [browser compatibility](https://github.com/opentimestamps/javascript-opentimestamps#compatibility).
 
@@ -18,7 +18,7 @@ Now let's begin!
 * Timestamp hash and retrieve the proof
 * Get information about the proof
 * Upgrade a pending proof
-* Check the proof on blockchain
+* Verify ots proof on blockchain
 
 > An JS OpenTimestamps web-interface and web-tools are available at [opentimestamps.org/tools](https://opentimestamps.org/tools/)
 
@@ -43,7 +43,7 @@ and add to html page:
 ```
 
 ## Get Hash from a file
-The easyest way to use to timestamp is hash together data and timstamp the hash. 
+The easyest way to use to timestamp is hash together data and timestamp the achived hash. 
 In js to extract the hash of an uploaded file or an array of bytes:
 
 * using [crypto-js](https://github.com/brix/crypto-js) lib from string object
@@ -97,11 +97,10 @@ A `detached` proof could be serialized to bytes with `serializeToBytes()` and do
 
 ![Timestamp data interface on opentimestamp.org/tools]({{ site.baseurl }}/img/opentimestamps-org-tools.png)
 
-
 ## Read ots proof
 
 Stamp command instantly provides an OpenTimestamps proof which contains the promised attestation of the stamped hash. 
-The check stamped attestation and verify the integrity of the proof, deserialize the ots proof and print the output of `info` command:
+Deserialize the ots proof and print the output of `info` command to visualize the binary ots in a human readable format
 
 ```
 const detached = OpenTimestamps.DetachedTimestampFile.deserialize(ots)
@@ -109,9 +108,7 @@ const output = OpenTimestamps.info(detached)
 console.log(output)
 ```
 
-The output is a chain of crypto-operation that describe a path from the originally stamped hash to one or more attestations. 
-
-For example the ots created in the previous example has the following output:
+The `info` output is a chain of crypto-operation that describe a path from the originally stamped hash to one or more attestations. The info of the previous example shows:
 
 ```
 File sha256 hash: 16193782f1d839a08f9fc9a94cec1675f1729db1abc15cf9b57f31aa1724a0ae
@@ -156,7 +153,7 @@ OpenTimestamps library timestamps a single hash three times. Using multiple cale
 
 ## Upgrade ots proof
 
-The ots proof could be upgrade to resolve pending attestations in order to obtain a completed timestamp. A `PendingAttestation` is a promise provided by a ots calendar and only that ots calendar could resolve.
+The ots proof could be upgraded to resolve pending attestations in order to obtain a completed timestamp. A `PendingAttestation` is a promise provided by a ots calendar and only that ots calendar could resolve.
 
 ```
 const detachedOts = OpenTimestamps.DetachedTimestampFile.deserialize(ots)
@@ -252,13 +249,13 @@ sha256
     verify BitcoinBlockHeaderAttestation(515107)
     # Bitcoin block merkle root 7d7cd153b837a18ba32b21af103af1691b1ba3d4248e7fc9c290211e15de37d5
 ```
-
-Each incomplete `PendingAttestation` has become a complete `BitcoinBlockHeaderAttestation` with the 
+Now the timestamp is completed and each incomplete `PendingAttestation` has become a `BitcoinBlockHeaderAttestation` with the corresponding block height. The bitcoin block contains the timestamp, so the date, of the stamped operation.
+Follow the crypto-operations path from hash to attestation, to get the merkle root of the bitcoin block.
 
 > To verify manually the ots proof: open a block-explorer and check if the block height and merkle root inside the attestation match.
  
 ## Verify ots proof
-OpenTimestamps library provides the `verify` command to check the integrity of a proof and verify all the completed attestations in order to obtain the timestamp of the proof.
+OpenTimestamps library provides the `verify` command to check the integrity of a proof and verify all the completed attestations in order to get the date of the proof.
 
 ```
 const hashData = "16193782f1d839a08f9fc9a94cec1675f1729db1abc15cf9b57f31aa1724a0ae"
@@ -279,7 +276,8 @@ OpenTimestamps.verify(detachedOts, detached).then( (results)=>{
     console.log("Bad attestation" + err);
 });
 ```
+The result is the unix timestamp of the first completed attestation, with lower block-height, in the example is `{bitcoin: 1521990170}`. The previous code formats the unix timestamp and show the following message: `Bitcoin attests data existed as of Sun Mar 25 2018 17:02:50 GMT+0200`
 
-The result is the unix timestamp of the first completed attestation, with lower block-height, in the example is `{bitcoin: 1521990170}`. The previous code formats timestamp and show the following message: `Bitcoin attests data existed as of Sun Mar 25 2018 17:02:50 GMT+0200`
-OpenTimestamp proof supports multiple chains, a multi-chain proof is verified in both the chains and provide different timestamps.
+> OpenTimestamp proof supports multiple chains, a multi-chain proof is verified in both the chains and provide different timestamps.
+
 
