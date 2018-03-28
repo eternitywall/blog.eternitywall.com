@@ -13,7 +13,7 @@ Opentimestamps javascript library is written for nodejs and [npm package](https:
 
 Now let's begin!
 
-* Get start opentimestamp.js
+* Get start opentimestamps.js
 * Get Hash from a file
 * Timestamp hash and retrieve the proof
 * Get information about the proof
@@ -22,14 +22,16 @@ Now let's begin!
 
 > An JS OpenTimestamps web-interface and web-tools are available at [opentimestamps.org/tools](https://opentimestamps.org/tools/)
 
-## Get start opentimestamp.js
-* download from website [opentimestamps.org](https://opentimestamps.org)
+## Get start opentimestamps.js
+In order to get the opentimestamps.js you can procede in the following manner:
+
+* download a ready file from the website [opentimestamps.org](https://opentimestamps.org) (or directly include in your page)
 
 ```html
 <script src="https://opentimestamps.org/assets/javascripts/vendor/opentimestamps.js"></script>
 ```
 
-* build sources from [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps) 
+* or build sources from [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps) 
 
 ```bash
 git clone https://github.com/opentimestamps/javascript-opentimestamps.git
@@ -42,11 +44,10 @@ and add to html page:
 <script src="./dist/opentimestamps.js"></script>
 ```
 
-## Get Hash from a file
-The easyest way to use to timestamp is hash together data and timestamp the achived hash. 
-In js to extract the hash of an uploaded file or an array of bytes:
+## Get hash from a file
+The first step in order to create a timestamp of a file is calculate the hash of the file, you can calculate this hash directly from the webpage using Javascript in the followin manners: 
 
-* using [crypto-js](https://github.com/brix/crypto-js) lib from string object
+* using the library [crypto-js](https://github.com/brix/crypto-js) from string object
 
 ```html
 <script type="text/javascript" src="/crypto-js.js"></script>
@@ -55,7 +56,7 @@ In js to extract the hash of an uploaded file or an array of bytes:
 </script>
 ```
 
-* using hash function in [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps) from byte array
+* using hash function available in [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps) from byte array
 
 ```html
 <script type="text/javascript" src="/opentimestamps.js"></script>
@@ -68,7 +69,7 @@ In js to extract the hash of an uploaded file or an array of bytes:
 > OpenTimestamps supports only sha1, sha256 and ripemd160 hash functions.
 
 ## Timestamp data
-The following code timestamp the Hash in hexadecimal format:
+After the calculation of the hash (in hexadecimal format) you can call the methods to generate the timestamps like show in the following code :
 
 ```js
 const hashData = "16193782f1d839a08f9fc9a94cec1675f1729db1abc15cf9b57f31aa1724a0ae"
@@ -97,10 +98,10 @@ A `detached` proof could be serialized to bytes with `serializeToBytes()` and do
 
 ![Timestamp data interface on opentimestamp.org/tools]({{ site.baseurl }}/img/opentimestamps-org-tools.png)
 
-## Read ots proof
+## Read ots proof content
 
-Stamp command instantly provides an OpenTimestamps proof which contains the promised attestation of the stamped hash. 
-Deserialize the ots proof and print the output of `info` command to visualize the binary ots in a human readable format
+The stamp command instantly provides an OpenTimestamps proof which contains the promised attestation of the stamped hash. 
+You can use the `info` command in order to visualize the binary ots in a human readable format.
 
 ```
 const detached = OpenTimestamps.DetachedTimestampFile.deserialize(ots)
@@ -145,15 +146,15 @@ sha256
     append c302502f95a0f008
     verify PendingAttestation('https://finney.calendar.eternitywall.com')
 ```
-OpenTimestamps proof is a chain of unary (hashing function) and binary (append, prepend) operations from the original stamped hash to the attestation. A `PendingAttestation` is a promise, by ots calendar, to put this data in the next transaction.
+The OpenTimestamps proof is a chain of unary (hashing function) and binary (append, prepend) operations from the original stamped hash to the attestation. A `PendingAttestation` is a promise, given from the ots calendar, to put this data in future transaction.
 
-OpenTimestamps library timestamps a single hash three times. Using multiple calendars allow to be more reliable and a valid security from side attacks.
+The OpenTimestamps library timestamp can use multiple calendars in order to allow to be more reliable and a robust from side attacks.
 
-> Uploading file uploading the proof-file at [opentimestamps.org](https://opentimestamps.org) and press INFO button in order to show a web visualizer of ots proofs
+> Uploading file uploading the proof-file at [opentimestamps.org](https://opentimestamps.org) and press INFO button in order to show a web visualizer of the ots proofs
 
-## Upgrade ots proof
+## Upgrade the ots proof
 
-The ots proof could be upgraded to resolve pending attestations in order to obtain a completed timestamp. A `PendingAttestation` is a promise provided by a ots calendar and only that ots calendar could resolve.
+The ots proof can be upgrade to resolve pending attestations and in order to obtain a complete timestamp. A `PendingAttestation` is a promise provided by an ots calendar that only this specific calendar can resolve.
 
 ```
 const detachedOts = OpenTimestamps.DetachedTimestampFile.deserialize(ots)
@@ -169,7 +170,7 @@ OpenTimestamps.upgrade(detachedOts).then( (changed) =>{
 })
 ```
 
-In the example, when the timestamp is changed, print the new ots info output
+In the example i show hot to print the new proof only when the timestamp is upgrade, generating the following output.
 
 ```
 File sha256 hash: 16193782f1d839a08f9fc9a94cec1675f1729db1abc15cf9b57f31aa1724a0ae
@@ -278,6 +279,4 @@ OpenTimestamps.verify(detachedOts, detached).then( (results)=>{
 ```
 The result is the unix timestamp of the first completed attestation, with lower block-height, in the example is `{bitcoin: 1521990170}`. The previous code formats the unix timestamp and show the following message: `Bitcoin attests data existed as of Sun Mar 25 2018 17:02:50 GMT+0200`
 
-> OpenTimestamp proof supports multiple chains, a multi-chain proof is verified in both the chains and provide different timestamps.
-
-
+> OpenTimestamps proof supports multiple chains, a multi-chain proof is verified in both the chains and providing different timestamps.
