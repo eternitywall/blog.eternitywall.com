@@ -154,7 +154,7 @@ The OpenTimestamps library timestamp can use multiple calendars in order to allo
 
 ## Upgrade the ots proof
 
-The ots proof can be upgrade to resolve pending attestations and in order to obtain a complete timestamp. A `PendingAttestation` is a promise provided by an ots calendar that only this specific calendar can resolve.
+The ots proof can be upgraded to resolve pending attestations and in order to obtain a complete timestamp. A `PendingAttestation` is a promise provided by an ots calendar that only this specific calendar can resolve. A resolved attestation is `BitcoinBlockHeaderAttestation` and it is verificable by block explorer. A timestamp is completed when there are at least one bitcoin attestation. The following code allows to `upgrade` a timestamp:
 
 ```
 const detachedOts = OpenTimestamps.DetachedTimestampFile.deserialize(ots)
@@ -170,7 +170,7 @@ OpenTimestamps.upgrade(detachedOts).then( (changed) =>{
 })
 ```
 
-In the example i show hot to print the new proof only when the timestamp is upgrade, generating the following output.
+After `upgrade` command, the example shows the output of `info` command:
 
 ```
 File sha256 hash: 16193782f1d839a08f9fc9a94cec1675f1729db1abc15cf9b57f31aa1724a0ae
