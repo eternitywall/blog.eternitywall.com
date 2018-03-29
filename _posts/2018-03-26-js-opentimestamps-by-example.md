@@ -13,25 +13,25 @@ Opentimestamps javascript library is written for nodejs and [npm package](https:
 
 Now let's begin!
 
-* Get start opentimestamps.js
-* Get Hash from a file
-* Timestamp hash and retrieve the proof
-* Get information about the proof
-* Upgrade a pending proof
-* Verify ots proof on the blockchain
+1. Get started with opentimestamps.js
+2. Get the hash of a file
+3. Timestamp hash and retrieve the proof
+4. Get information about the proof
+5. Upgrade a pending proof
+6. Verify the ots proof on the blockchain
 
-> An JS OpenTimestamps web-interface and web-tools are available at [opentimestamps.org/tools](https://opentimestamps.org/tools/)
+> JS OpenTimestamps web-interface and web-tools are available at [opentimestamps.org/tools](https://opentimestamps.org/tools/)
 
-## Get start opentimestamps.js
+## Get started with opentimestamps.js
 In order to get the opentimestamps.js you can proceed in the following manner:
 
-* download a ready file from the website [opentimestamps.org](https://opentimestamps.org) (or directly include in your page)
+Download a ready file from the website [opentimestamps.org](https://opentimestamps.org) (or directly include in your page)
 
 ```html
 <script src="https://opentimestamps.org/assets/javascripts/vendor/opentimestamps.js"></script>
 ```
 
-* or build sources from [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps) 
+Or build sources from [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps) 
 
 ```bash
 git clone https://github.com/opentimestamps/javascript-opentimestamps.git
@@ -44,7 +44,7 @@ and add to html page:
 <script src="./dist/opentimestamps.js"></script>
 ```
 
-## Get hash from a file
+## Get the hash of a file
 The first step in order to create a timestamp of a file calculates the hash of the file, you can calculate this hash directly from the webpage using Javascript in the following manners: 
 
 * using the library [crypto-js](https://github.com/brix/crypto-js) from string object
@@ -68,7 +68,7 @@ The first step in order to create a timestamp of a file calculates the hash of t
 
 > OpenTimestamps supports only sha1, sha256 and ripemd160 hash functions.
 
-## Timestamp data
+## Timestamp hash and retrieve the proof
 After the calculation of the hash (in hexadecimal format) you can call the methods to generate the timestamps like show in the following code :
 
 ```js
@@ -98,7 +98,7 @@ A `detached` proof could be serialized to bytes with `serializeToBytes()` and do
 
 ![Timestamp data interface on opentimestamp.org/tools]({{ site.baseurl }}/img/opentimestamps-org-tools.png)
 
-## Read ots proof content
+## Get information about the proof
 
 The stamp command instantly provides an OpenTimestamps proof which contains the promised attestation of the stamped hash. 
 You can use the `info` command in order to visualize the binary ots in a human-readable format.
@@ -152,7 +152,7 @@ The OpenTimestamps library timestamp can use multiple calendars in order to allo
 
 > Uploading file uploading the proof-file at [opentimestamps.org](https://opentimestamps.org) and press INFO button in order to show a web visualizer of the ots proofs
 
-## Upgrade the ots proof
+## Upgrade a pending proof
 
 The ots proof can be upgraded to resolve pending attestations and in order to obtain a complete timestamp. A `PendingAttestation` is a promise provided by an ots calendar that only this specific calendar can resolve.
  A resolved attestation is `BitcoinBlockHeaderAttestation` and it is verificable by block explorer. 
@@ -257,7 +257,7 @@ Follow the crypto-operations path from hash to attestation, to get the merkle ro
 
 > To verify manually the ots proof: open a block-explorer and check if the block height and merkle root inside the attestation match.
  
-## Verify ots proof
+## Verify the ots proof on the blockchain
 OpenTimestamps library provides the `verify` command to check the integrity of a proof and verify all the completed attestations in order to get the date of the proof.
 
 ```js
