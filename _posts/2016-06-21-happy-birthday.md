@@ -3,6 +3,7 @@ layout:     post
 title:      "Happy first birthday Eternity Wall"
 subtitle:   "the first of an infinite number"
 author:     "riccardo.casatta"
+image:        "/img/1st-birthday.jpg"
 ---
 
 <a href="/img/1st-birthday.jpg">
