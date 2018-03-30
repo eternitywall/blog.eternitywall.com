@@ -10,3 +10,11 @@
         float: left;
     }
 }
+
+.thumb {
+  display:  block;
+  float:  left;
+  max-width: 100px;
+  max-height: 100px;
+  padding: 10px;
+}

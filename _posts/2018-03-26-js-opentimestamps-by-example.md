@@ -3,11 +3,12 @@ layout:     post
 title:      "JS OpenTimestamps by example"
 subtitle:   "Learn OpenTimestamps javascript library on browser with examples"
 author:     "luca.vaccaro"
+image:      "/img/opentimestamps-org-tools-squared.png"
 ---
 
 OpenTimestamps is a standard format for blockchain timestamping.
 
-The official implementation is written in [Python by Peter Todd](https://github.com/opentimestamps/python-opentimestamps), and there are libraries in different languages: [javascript](https://github.com/opentimestamps/javascript-opentimestamps), [java](https://github.com/opentimestamps/java-opentimestamps), [rust](https://github.com/opentimestamps/rust-opentimestamps).
+The reference implementation is written in [Python by Peter Todd](https://github.com/opentimestamps/python-opentimestamps), and there are libraries in different languages: [javascript](https://github.com/opentimestamps/javascript-opentimestamps), [java](https://github.com/opentimestamps/java-opentimestamps), [rust](https://github.com/opentimestamps/rust-opentimestamps).
 
 Opentimestamps javascript library is written for nodejs and [npm package](https://www.npmjs.com/package/javascript-opentimestamps) is publicly available. OpenTimestamps library could be used also on the client side, for more details check [browser compatibility](https://github.com/opentimestamps/javascript-opentimestamps#compatibility).
 
@@ -31,7 +32,7 @@ Download a ready file from the website [opentimestamps.org](https://opentimestam
 <script src="https://opentimestamps.org/assets/javascripts/vendor/opentimestamps.js"></script>
 ```
 
-Or build sources from [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps) 
+Or build sources from [javascript-opentimestamps](https://github.com/opentimestamps/javascript-opentimestamps)
 
 ```bash
 git clone https://github.com/opentimestamps/javascript-opentimestamps.git
@@ -45,7 +46,7 @@ and add to html page:
 ```
 
 ## Get the hash of a file
-The first step in order to create a timestamp of a file calculates the hash of the file, you can calculate this hash directly from the webpage using Javascript in the following manners: 
+The first step in order to create a timestamp of a file calculates the hash of the file, you can calculate this hash directly from the webpage using Javascript in the following manners:
 
 * using the library [crypto-js](https://github.com/brix/crypto-js) from string object
 
@@ -92,7 +93,7 @@ To create a new detached object use `fromHash()` constructor and pass as input p
 > Use `fromBytes()` constructor to create a new detached file from an array of bytes, instead `fromHash()`
 
 Then call `OpenTimestamps.stamp()` to timestamp the hash inside `detached` object.
-> In `stamp()` function, `detached` is an input / output parameters, since `OpenTimestamps.DetachedTimestampFile` is the proof. 
+> In `stamp()` function, `detached` is an input / output parameters, since `OpenTimestamps.DetachedTimestampFile` is the proof.
 
 A `detached` proof could be serialized to bytes with `serializeToBytes()` and download as `ots` file; vice-versa, deserialize an byte array to an object with `OpenTimestamps.DetachedTimestampFile.deserialize(ots)`.
 
@@ -100,7 +101,7 @@ A `detached` proof could be serialized to bytes with `serializeToBytes()` and do
 
 ## Get information about the proof
 
-The stamp command instantly provides an OpenTimestamps proof which contains the promised attestation of the stamped hash. 
+The stamp command instantly provides an OpenTimestamps proof which contains the promised attestation of the stamped hash.
 You can use the `info` command in order to visualize the binary ots in a human-readable format.
 
 ```js
@@ -155,7 +156,7 @@ The OpenTimestamps library timestamp can use multiple calendars in order to allo
 ## Upgrade a pending proof
 
 The ots proof can be upgraded to resolve pending attestations and in order to obtain a complete timestamp. A `PendingAttestation` is a promise provided by an ots calendar that only this specific calendar can resolve.
- A resolved attestation is `BitcoinBlockHeaderAttestation` and it is verificable by block explorer. 
+ A resolved attestation is `BitcoinBlockHeaderAttestation` and it is verificable by block explorer.
  A timestamp is completed when there are at least one bitcoin attestation. The following code allows to `upgrade` a timestamp:
 
 ```js
@@ -256,15 +257,15 @@ Now the timestamp is completed and each incomplete `PendingAttestation` has beco
 Follow the crypto-operations path from hash to attestation, to get the merkle root of the bitcoin block.
 
 > To verify manually the ots proof: open a block-explorer and check if the block height and merkle root inside the attestation match.
- 
+
 ## Verify the ots proof on the blockchain
 OpenTimestamps library provides the `verify` command to check the integrity of a proof and verify all the completed attestations in order to get the date of the proof.
 
 ```js
 const hashData = "16193782f1d839a08f9fc9a94cec1675f1729db1abc15cf9b57f31aa1724a0ae"
 const op = new OpenTimestamps.Ops.OpSHA256()
-const detached = OpenTime 
- 
+const detached = OpenTime
+
 stamps.DetachedTimestampFile.fromHash(op, hashData)
 const detachedOts = OpenTimestamps.DetachedTimestampFile.deserialize(ots)
 OpenTimestamps.verify(detachedOts, detached).then( (results)=>{

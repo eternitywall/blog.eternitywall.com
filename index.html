@@ -6,6 +6,9 @@ layout: page
 {% for post in paginator.posts %}
 {% assign author = site.authors[post.author] %}
 <div class="post-preview">
+      {% if post.image %}
+      <img src="{{ post.image | prepend: site.baseurl }}" class="thumb">
+      {% endif %}
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
         </h2>
