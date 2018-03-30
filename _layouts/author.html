@@ -24,6 +24,9 @@ He wrote {{ total_posts }} {% if total_posts == 1 %}post{% else %}posts{% endif 
 {% for post in site.posts %}
         {% if post.author == page.author %}
         <div class="post-preview">
+            {% if post.image %}
+            <img src="{{ post.image | prepend: site.baseurl }}" class="thumb">
+            {% endif %}
             <a href="{{ post.url | prepend: site.baseurl }}">
                 <h2 class="post-title">
                 {{ post.title }}
