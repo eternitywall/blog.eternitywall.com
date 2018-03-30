@@ -3,6 +3,7 @@ layout:     post
 title:      "Welcome signed eternal message"
 subtitle:   "Nominal message are now public"
 author:     "riccardo.casatta"
+image:      "/img/signed-messages-are-now-public.png"
 ---
 
 <div>

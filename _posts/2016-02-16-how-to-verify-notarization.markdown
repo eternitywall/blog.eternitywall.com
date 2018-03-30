@@ -3,6 +3,7 @@ layout:     post
 title:      "How to manually verify notarization?"
 subtitle:   "Warning: technical content"
 author:     "riccardo.casatta"
+image:      "/img/Hash_Tree.svg"
 ---
 
 This is my actual profile picture:

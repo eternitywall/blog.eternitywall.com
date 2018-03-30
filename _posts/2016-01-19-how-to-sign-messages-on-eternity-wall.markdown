@@ -3,6 +3,7 @@ layout:     post
 title:      "How to sign messages on Eternity Wall"
 subtitle:   "Tutorial"
 author:     "hostfat"
+image:      "/img/ew_new_id_img/01.png"
 ---
 
 <img src="/img/ew_new_id_img/10.png" width="172" class="center-block" />

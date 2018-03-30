@@ -3,6 +3,7 @@ layout:     post
 title:      "How to write a message on the Blockchain"
 subtitle:   "without Eternity Wall"
 author:     "federico.tenga"
+image:      "/img/how-to-write.png"
 ---
 
 In this guide we will see how you can write a message on the Blockchain by yourself, without using Eternity Wall. All you need is a synchronized Bitcoin Core client with some balance on it, just to pay transaction fees.

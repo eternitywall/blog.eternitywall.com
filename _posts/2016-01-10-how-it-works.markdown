@@ -3,6 +3,7 @@ layout:     post
 title:      "How it works?"
 subtitle:   "Eternity Wall infographic"
 author:     "riccardo.casatta"
+image:      "/img/infografica_signed_new.png"
 ---
 
 In the effort to better explain why and how Eternity Wall works we are releasing the following infographic:

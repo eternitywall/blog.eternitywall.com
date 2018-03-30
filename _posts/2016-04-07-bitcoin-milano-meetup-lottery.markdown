@@ -3,6 +3,7 @@ layout:     post
 title:      "Bitcoin Milano meetup lottery"
 subtitle:   "Win a Ledger Wallet"
 author:     "riccardo.casatta"
+image:      "/img/ledger-nano-solo-large.png"
 ---
 
 <img src="{{ site.baseurl }}/img/ledger-nano-solo-large.png" class="center-block" style="cursor:pointer">
