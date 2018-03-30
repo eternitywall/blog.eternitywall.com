@@ -11,10 +11,21 @@
     }
 }
 
+
 .thumb {
   display:  block;
   float:  left;
-  max-width: 100px;
-  max-height: 100px;
-  padding: 10px;
+  max-width: 140px;
+  max-height: 140px;
+  padding: 10px 14px 10px 14px;
+}
+
+@media only screen and (max-width: 768px) {
+  .thumb {
+    display:  block;
+    float:  left;
+    max-width: 100px;
+    max-height: 100px;
+    padding: 6px 10px 6px 10px;
+  }
 }
