@@ -3,6 +3,7 @@ layout: post
 title: OpenTimestamps meets Electrum
 subtitle: An Electrum plugin to create OpenTimestamp proofs with your transactions
 author: leonardo.comandini
+image: "/img/electrum-timestamp-plugin/electrum-meets-opentimestamps-thumbnail.png"
 ---
 
 *Have you ever timestamped?*

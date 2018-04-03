@@ -3,6 +3,7 @@ layout: post
 title: "Create the shortest transaction"
 subtitle: "How much a transaction can be squeezed?"
 author: "leonardo.comandini"
+image: "/img/shortest-transaction-thumbnail.png"
 ---
 
 
