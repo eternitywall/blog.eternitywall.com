@@ -3,6 +3,7 @@ layout: post
 title: "OpenTimestamps performances"
 subtitle: "It's fast enough"
 author: "valerio.vaccaro"
+image: "/img/minimum_delay.jpg"
 ---
 
 # Executive Summary
