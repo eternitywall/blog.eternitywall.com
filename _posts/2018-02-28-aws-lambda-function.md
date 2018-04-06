@@ -3,6 +3,7 @@ layout:     post
 title:      "Integrate OpenTimestamps on S3 cloud storage"
 subtitle:   "Stamp automatically files on Amazon S3 using AWS Lambda functions"
 author:     "luca.vaccaro"
+image:      "/img/aws-lambda-functions/services.png"
 ---
 
 OpenTimestamps is a scalable, trustless, distributed protocol to timestamp files, documents and media on Bitcoin.
