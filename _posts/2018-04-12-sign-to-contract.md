@@ -18,6 +18,8 @@ Yet, if you want to timestamp by yourself, you have to pay some more fees.
 
 Actually there is a way to avoid to pay those extra satoshis: a *math trick* that makes possible to *include a cryptographic commitment inside an elliptic curve point*. 
 Thanks to this gimmick every purely financial transaction can be turned into a timestamping transaction, while still serving for its original purpose and without adding a single additional byte.
+This allows users not only to timestamp their data with no marginal cost, 
+but, with no expense, they can also help the calendar timestamping its Merkle tip, leading to more frequent timestamps for calendar clients.
 
 The post is structured as follows:
 - history of the name
@@ -34,11 +36,14 @@ The post is structured as follows:
 # A bit of history
 When hearing the name *sign-to-contract*, 
 you may wonder from where the contract comes out.
-To find an answer we have to go back (in 2012) to one of the [first applications](https://arxiv.org/pdf/1212.3257.pdf) that was developed: *pay-to-contract* (*sign-to-contract* elder brother) which basically allows to embed a contract inside a receiver public key.
+To find an answer we have to go back (in 2012) to one of the [first applications](https://arxiv.org/pdf/1212.3257.pdf) that was developed: *pay-to-contract* (*sign-to-contract* elder brother) which basically allows to commit a contract to a receiver public key.
 When a customers performs a payment to a merchant, with *pay-to-contract*, 
-he can bind the bill containing the details of the purchase to the receiving address.
+he can commit the bill containing the details of the purchase to the receiving address.
 
-Although other uses of these techniques are possible, 
+Both *pay-to-contract* and *sign-to-contract* are based on the same operation that allows to commit a value to a public key (`secp256k1` point) used in a bitcoin transaction.
+Such operation is called *secp256k1 commitment* and its functioning is detailed in the following section.
+
+Although secp256k1 commitments could serve different scopes, 
 we focus on timestamping purposes 
 and we take as a reference the [PR](https://github.com/opentimestamps/python-opentimestamps/pull/14) to OpenTimestamps 
 (and the preceding [issue](https://github.com/opentimestamps/python-opentimestamps/issues/12)) by Andrew Poelstra.
@@ -47,11 +52,12 @@ and we take as a reference the [PR](https://github.com/opentimestamps/python-ope
 Now we need to get our hands into cryptography to unveil how this math trick works under the hood
 (don't get scared, we provide a quick recap of the results at the end of the section).
 
-Given an elliptic curve with generator `G` and a second-preimage resistant hash function `h`.
-The map `m,P -> h(P||m)G + P`, where `||` stands for concatenation, `m` is the message to commit and `P` is an elliptic curve point, is a valid commitment operation.
+Given an elliptic curve with generator `G` and a random oracle hash function `h`.
+The map `m,P -> h(P||m)G + P`, where `||` stands for concatenation, `m` is the value to commit and `P` is an elliptic curve point, is a valid commitment operation.
 The output of the map is `C(m,P)`, which is an elliptic curve point.
 
-`m` is the so-called contract and `P` is a public key used for a certain (and possibly independent) purpose.
+The value `m` is arbitrary, in particular it can be a commitment to something else (e.g. the hash of a document), 
+and `P` is a public key used for a certain (and possibly independent) purpose.
 The public key `C(m,P)` is a commitment to `m` and `P` 
 in the sense that if the input is changed, so `(m,P)!=(m',P')`, 
 then the output changes, `C(m,P)!=C(m',P')`.
@@ -64,7 +70,7 @@ We won't use directly the corresponding `C`, but instead a slightly modified ver
 It takes one input, `P||m`, and outputs the x-coord of the elliptic curve point `C(m,P)`.
 
 **Recap:** 
-pick a message to commit (also called contract) `m` and a public key `P` (on the curve `secp256k1`), concatenate them (`P||m`), then compute:
+pick a value to commit `m` and a public key `P` (on the curve `secp256k1`), concatenate them (`P||m`), then compute:
 ```
 C(m,P) = SHA256(P||m)G + P 
 OpSecp256k1Commitment(P||m) = C(m,P).x
@@ -85,53 +91,27 @@ Thus she tells Bob to send his bitcoins to `Q = A + h(A||d)G`.
 Bob, who eventually is not aware that he is timestamping Alice's document, 
 broadcasts the transaction, 
 which after a while becomes part of the blockchain forever.
-Alice composes her OpenTimestamps proof for her document, by finding `Q.x` on the chain and arranging the proof as follows: 
+Alice composes her OpenTimestamps proof for her document, by finding `Q.x` on the chain and conveniently arranging the proof.
 
-```
-File sha256: d
-Timestamp:
-prepend A == d||A
-secp256k1commitment == Q.x
-prepend Q.y == Q  # y-coord is 02 or 03
-prepend TXp == TXp||Q
-append TXa == TXp||Q||TXa
-# transaction id ...
-sha256
-...
-sha256
-verify BitcoinBlockHeaderAttestation(...)
-# Bitcoin merkle root ...
-```
-So Alice has created an OTS timestamp for her document without spending a single satoshi.
+However, by implementing this scheme Alice is exposing herself to a new risk.
+Her new key `Q` is a deterministic function of `x` (private key of `A`) and `d`, 
+but, while `x` is derived from the seed (carefully stored),
+instead the value `d` is probably something new and unrelated to her wallet.
+If her computer catches fire, 
+the seed alone won't be enough to find the private key to redeem the coin locked by `Q`,
+since it is required also `d`, 
+which needs an ad hoc backup that possibly has not taken place.
 
-But, wait, has Alice received the payment from Bob?
-
-She has, but the question is delicate.
-
-Alice knows the private key `x` corresponding to `A`, `xG = A`. 
-Then, if she remembers `d`, she knows that `Q = xG + h(A||d)G = (x + h(A||d))G`, 
-Thus she has `x + h(A||d)` which is the private key of `Q`.
-So, basically, if Alice has `x` and `d`,
- she can spend the bitcoins she received.
-
-However Alice, like almost anyone, is using a deterministic wallet 
-and all her keys (so also `x`) are deterministically derived from a single seed 
-that Alice carefully stores. 
-If her computer suddenly catches fire, 
-she will be able to recover all her bitcoins with the seed only.
-By receiving such a payment, 
-Alice is derailing from the deterministic derivation 
-and the seed alone won't be enough to recover the bitcoins locked by `Q`.
-For this reason using *pay-to-contract* for timestamping purposes is not advisable.
+This technique may lead to a loss of funds, hence using *pay-to-contract* for timestamping purposes is not advisable.
 
 ## *sign-to-contract*
 Now Carl has to pay Diana. 
-Carl wants also to timestamp a contract with hash value `c`.
+Carl wants also to timestamp a value `c`.
 With *sign-to-contract* he can fit a commitment to `c` inside the signature.
 To understand how, we need to recall how signatures work.
 
 Signatures in Bitcoin are made with ECDSA which involves elliptic curve points, 
-namely a signature is a couple of integers `(r,s)` in `(0,n)` where `n` is the order of the curve.
+namely a signature is a couple of integers `(r,s)` in `Z/nZ` where `n` is the order of the curve.
 In a simplified way, a signature for a message `m` and from a user with private key `x` is done as follows:
 
 ```
@@ -147,11 +127,11 @@ He composes an unsigned transaction `uTX` sending from that address to Diana's.
 To sign the transaction he applies `ECDSAsign(x,m)` where `m` is the hash value of `uTX` conveniently serialized.
 Once produced the signature `(r,s)` Carl fill `uTX` with an encoded version of the signature `SIG(r,s)`, 
 obtaining the signed (and broadcastable) transaction `TX`.
-Then sends `TX` to the network and, later on, when confirmed (~6 blocks), it becomes part of the blockchain forever.
+Then sends `TX` to the network and, later on, when confirmed, it becomes part of the blockchain forever.
 
 We can see that inside `ECDSAsig` an elliptic curve point (`R`) is used.
 The idea of *sign-to-contract* is simply to tweak it with `h(R||c)`, 
-making it __also__ a commitment to another value, the contract `c`.
+making it __also__ a commitment to another value `c`.
 
 ```
 def ECDSAsign2contract(x,m,c):
@@ -170,7 +150,7 @@ Now `uTX` is filled with `SIG(q,z)` which contains `q`, which in turn is (almost
 As before, the resulting `TX` then is committed to the blockchain.
 
 Carl then looks at `TX`, in which he spots `Q.x`, with `TX = TXp||Q.x||TXa`. 
-By retrieving the info to link `TX` to a block header we can complete the timestamp for the contract `c`:
+By retrieving the info to link `TX` to a block header we can complete the timestamp for `c`:
 ```
 File sha256: c
 Timestamp:
@@ -185,44 +165,25 @@ sha256
 verify BitcoinBlockHeaderAttestation(...)
 # Bitcoin merkle root ...
 ``` 
-**Resuming**, while doing a purely financial transaction to Diana, **Carl timestamped** a contract, 
+**Resuming**, while doing a purely financial transaction to Diana, **Carl timestamped** a value, 
 without adding any bytes, so **with zero marginal cost**.
 Diana could be unaware that Carl timestamped, 
-from her prospective the coins she just received are indistinguishable from coins signed in the standard way. 
+from her perspective the coins she just received are indistinguishable from coins signed in the standard way. 
 Such coins are locked in the pubkey (or address) that Diana told Carl, 
 hence Diana's new coins are as secured as normal coins. 
 
-But what about Carl?
-Aside from timestamping, can this procedure compromise his security?
-
-The delicate phase is between the broadcast and the confirmation, 
-if, in that period, Carl secret key `x` gets exposed, an eavesdropper, Eve, will redirect Carl's coin to her. 
-However, once the transaction to Diana is confirmed, Eve cannot do much (unless Carl does address reuse), 
-since the coins locked by `x` are already spent.
-The private key can also be revealed in a indirect way, 
-in fact in a signature revealing the nonce `k` 
-(or `e` to be consistent with the above formula) 
-is equivalent to expose `x`.
-Still *sign-to-contract* does not increase the risks Carl faces with a standard signature.
-Indeed when showing his OTS proof he just claims that what can be found  in the signature (namely `Q.x`) was obtained from the elliptic curve point (`Q=e*G`) which is the sum of two other specific points (`R` and `h(R||c)*G`),
-but actually this does not give any additional clue to solve the discrete logarithm that secures the signature.
-
-Another way to expose `x` is signing two times with two different nonces
-and then spreading both signatures;
-this may happen if Carl uses *sign-to-contract* with 
-`(x,m,c1)` and `(x,m,c2)` and then broadcasts both transactions.
-He should take care not to do so.
-
-In addition, if Carl looses the contract along with its hash `c`, 
+Carl chose a particular nonce that allowed him to commit to a value.
+The resulting singature is indistinguishable from a standard one and has the same security.
+Moreover, if he looses the committed value `c`, 
 then he looses the ability of proving the timestamp,
 but he does not compromise any coin: 
 his coins have been already spent and Diana has hers in the desired destination, 
-which is independent from the contract.
+which is independent from `c`.
 For this reason *sign-to-contract* should be preferred when timestamping.
 
 ## Remarks
-- The name contract is merely due to historical reasons.
-  The so-called contract could be any arbitrary data: 
+- The name is merely due to historical reasons and it came out of the desire to commit to contracts when paying someone.
+  The value committed could be any arbitrary data: 
   for practical timestamping purposes it will be a Merkle tip aggregating several single timestamps.
 - Each elliptic curve point can include a commitment,
   thus each pubkey, as well as each signature, could be used as anchoring point.
@@ -240,9 +201,11 @@ For this reason *sign-to-contract* should be preferred when timestamping.
   whose tip is inserted in the coinbase transaction. 
   As a result, the signature is committed in the block header, 
   but the path has to traverse both trees and the coinbase.
-  Thus proofs double in size 
-  and the miner may decide to include arbitrary data in the proofs, 
-  since he has some control on what is inside the coinbase.
+  Thus proofs at least double in size, 
+  the miner has some control on what is inside the coinbase, 
+  so he may decide to include malicious data or 
+  make the coinbase so large (multiple KB) 
+  that it won't be possible to create an OTS proof passing through that.
 
 # An actual implementation w/ Electrum
 Implementing this stuff may seem simple,
@@ -351,7 +314,7 @@ Run on `mainnet`
 5. Check the timestamp history:
     - `Tools -> Timestamps`, the file now is an pending state
 
-6. Wait until the transaction is confirmed (~6 blocks), you can now create the timestamp proof (`file_name.ots`):
+6. Wait until the transaction is confirmed, you can now create the timestamp proof (`file_name.ots`):
     - `Tools -> Timestamps`, 
     click on `Upgrade`,
     the timestamp now is complete
@@ -369,16 +332,15 @@ for instance with `python3 ots-info.py "/path/file_name.txt.ots"`.
 Then manually verify the correspondence with the hash of the file and the block header merkle root.
 
 # Conclusions
-Elliptic curve commitments embed values in elliptic curve points.
+Elliptic curve commitments commit values in elliptic curve points.
 They can be used with public keys (*pay-to-contract*) or in signatures (*sign-to-contract*).
 Although they have several uses, we confined ourselves to timestamping.
 *pay-to-contract* drives you out of a BIP32 logic and may lead you to a loss of funds;
 *sign-to-contract* does not, thus is better for timestamping purposes.
 
-Nevertheless, *sign-to-contract* has some issues that should be addresses. 
-Avoid to sign two times the same tx with different contracts 
-and, if using segwit, remind that the proof is longer and 
-contains arbitrary data by the miner.
+Nevertheless, *sign-to-contract* has some issues that should be addressed. 
+If using segwit, remind that the proof is longer, 
+contains arbitrary data by the miner and could be too large to create the OTS proof.
 
 As of writing, `OpSecp256k1Commitment` is not yet part of 
 the standard library python-opentimestamps,
@@ -391,7 +353,14 @@ and can produce OTS proofs with zero marginal cost.
 We integrated it with Electrum as a plugin: 
 your purely financial transaction can also timestamp stuff with no extra charge.
 
-__P.S.__ This blog post sums up the the content of my master's degree thesis. 
+Since the cost reduction, users may start to consistently help the calendar timestamping its Merkle tip, 
+leading to more frequent timestamps for calendar clients.
+However, even though this seems promising, it may expose clients to new risks, 
+hence it requires some work to be implemented properly. 
+
+__P.S.__ I would like to thank Riccardo Casatta, Peter Todd and Andrew Poelstra for reviewing this post.
+
+__P.P.S.__ This blog post sums up the the content of my master's degree thesis. 
 The work was done during an internship at Eternity Wall, 
 which put me in the condition to properly understand the subject 
 and deserves most credit. 
