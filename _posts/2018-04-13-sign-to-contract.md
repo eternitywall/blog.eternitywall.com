@@ -27,7 +27,7 @@ The post is structured as follows:
     - *pay-to-contract*
     - *sign-to-contract*
     - some remarks
-- an actual implementation w\ Electrum
+- an actual implementation w/ Electrum
     - how to run
     - how to timestamp
     - how to verify
@@ -236,7 +236,7 @@ make sure it is not messing up your Electrum or OpenTimestamps working libraries
 Assuming running on Linux.
  
 You need to use the custom library by [apoelstra](https://github.com/apoelstra) that integrates `OpSecp256k1Commitment` in OpenTimestamps.
-You need to download electrum from source and integrate it with the timestamp plugin. 
+You need to download Electrum from source and integrate it with the timestamp plugin. 
  
 ``` 
 git clone https://github.com/apoelstra/python-opentimestamps.git
@@ -245,8 +245,8 @@ git clone git://github.com/spesmilo/electrum.git
 ```
 
 Now go to the sign-to-contract (`s2c`) branch, 
-copy the plugin file in the local electrum directory, 
-then copy a temporary version of setup.py in the custom version of python-opentimestamps just downloaded.
+copy the plugin file in the local Electrum directory, 
+then copy a temporary version of `setup.py` in the custom version of python-opentimestamps just downloaded.
 ```
 cd electrum-timestamp-plugin
 git checkout s2c
