@@ -1,12 +1,12 @@
 # Site settings
 title: Eternity Wall Blog
 header-img: img/header-bg.jpg
-email: feedback@eternitywall.it
+email: feedback@eternitywall.com
 description: "Eternity Wall, messages lasting forever. Posts a little less..."
 baseurl: ""
-url: "http://blog.eternitywall.com"
+url: "https://blog.eternitywall.com"
 twitter_username: eternitywall
-github_username:  RCasatta
+github_username:  eternitywall
 
 # Build settings
 markdown: kramdown
