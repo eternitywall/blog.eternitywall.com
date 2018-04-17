@@ -7,5 +7,6 @@ layout: null
     subtitle: "{{ post.subtitle }}",
     author: "{{ post.author }}",
     image: "{{ post.image | prepend: site.url }}"
+    date: "{{ post.date | date_to_rfc822 }}"
   }{% if forloop.last == false %},{% endif %} {% endfor %}
 ]
