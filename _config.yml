@@ -32,6 +32,7 @@ authors:
     web: https://riccardo.casatta.it
     twitter: RCasatta
     github: RCasatta
+    image: "https://eternitywall.com/img/team/Riccardo_Casatta_236.jpg"
   hostfat:
     name: Franco Cimatti
     display_name: HostFat
@@ -50,12 +51,14 @@ authors:
     web: http://www.valeriovaccaro.it/
     twitter: tulipan81
     github: valerio-vaccaro
+    image: "https://eternitywall.com/img/team/Valerio_Vaccaro_236.jpg"
   luca.vaccaro:
     name: Luca Vaccaro
     display_name: Luca Vaccaro
     email: luca@eternitywall.com
     twitter: lucavaccaro87
     github: lvaccaro
+    image: "https://eternitywall.com/img/team/Luca_Vaccaro_236.jpg"
   peter.todd:
     name: Peter Todd
     display_name: Peter Todd
@@ -63,9 +66,11 @@ authors:
     web: https://petertodd.org/
     twitter: petertoddbtc
     github: petertodd
+    image: "https://eternitywall.com/img/team/Peter_Todd_236.jpg"
   leonardo.comandini:
     name: Leonardo Comandini
     display_name: Leonardo Comandini
     email: leonardo@eternitywall.com
     twitter: LeoComandini
     github: LeoComandini
+    image: "https://eternitywall.com/img/team/Leonardo_Comandini_236.jpg"
