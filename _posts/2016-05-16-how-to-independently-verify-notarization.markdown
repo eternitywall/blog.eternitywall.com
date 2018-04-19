@@ -3,6 +3,7 @@ layout:     post
 title:      "How to independently verify notarization?"
 subtitle:   "From your browser"
 author:     "riccardo.casatta"
+image:      "/img/eternity_logo_final.svg"
 ---
 
 After the notarization service [launch](http://blog.eternitywall.it/2016/02/03/timestamping-hashes-on-the-blockchain/) back in February we posted about [manually verify](http://blog.eternitywall.it/2016/02/16/how-to-verify-notarization/) the Eternity Wall provided stamp [example](http://eternitywall.it/v1/hash/20c7ba9c57f653b7c079df5171c196f494a5446d684c1b26a63bc5fc3fa2e25e).

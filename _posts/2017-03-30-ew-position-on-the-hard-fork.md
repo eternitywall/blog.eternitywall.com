@@ -3,6 +3,7 @@ layout:     post
 title:      "EW position on the hard-fork"
 subtitle:   "We care about decentralization and immutability"
 author:     "riccardo.casatta"
+image:      "/img/segwit-logo-e1513445910656.png"
 ---
 
 Eternity Wall works on the assumption of an immutable and decentralized blockchain.

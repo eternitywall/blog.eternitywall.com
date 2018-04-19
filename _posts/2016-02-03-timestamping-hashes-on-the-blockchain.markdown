@@ -3,6 +3,7 @@ layout:     post
 title:      "Timestamping documents"
 subtitle:   "on the blockchain"
 author:     "riccardo.casatta"
+image:      "/img/eternity_logo_final.svg"
 ---
 
 ## Timestamping documents on the blockchain

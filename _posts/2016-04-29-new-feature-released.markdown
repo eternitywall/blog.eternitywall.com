@@ -3,6 +3,7 @@ layout:     post
 title:      "New features released"
 subtitle:   "Short urls and customized referral link"
 author:     "riccardo.casatta"
+image:      "/img/eternity_logo_final.svg"
 ---
 
 

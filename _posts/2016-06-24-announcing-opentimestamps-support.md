@@ -3,6 +3,7 @@ layout:     post
 title:      "Announcing OpenTimestamps support"
 subtitle:   "Full independent verification"
 author:     "riccardo.casatta"
+image:      "/img/mail-stamp-template.svg"
 ---
 
 # OpenTimestamps

@@ -3,6 +3,7 @@ layout:     post
 title:      "Buy Eternity Wall API with bitcoin"
 subtitle:   "Without an account"
 author:     "riccardo.casatta"
+image:      "/img/21.png"
 ---
 
 Yesterday there were two ways to call our hash timestamping service.
