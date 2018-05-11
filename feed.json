@@ -1,12 +1,14 @@
 ---
 layout: null
 ---
-[ {% for post in site.posts limit:10 %}
+[ {% for post in site.posts limit:50 %}
   {
-    title: "{{ post.title | xml_escape }}",
-    subtitle: "{{ post.subtitle }}",
-    author: "{{ post.author }}",
-    image: "{{ post.image | prepend: site.url }}"
-    date: "{{ post.date | date_to_rfc822 }}"
+    "title": "{{ post.title | xml_escape }}",
+    "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
+    "subtitle": "{{ post.subtitle }}",
+    "author": "{{ site.authors[post.author].display_name }}",
+    "author_url": "{{ post.author | prepend: '/author/' | prepend: site.baseurl | prepend: site.url }}",
+    "image": "{{ post.image | prepend: site.url }}",
+    "date": "{{ post.date | date_to_rfc822 }}"
   }{% if forloop.last == false %},{% endif %} {% endfor %}
 ]
