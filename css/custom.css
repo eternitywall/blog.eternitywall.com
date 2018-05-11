@@ -27,14 +27,11 @@
 
 @media only screen and (max-width: 768px) {
   .thumb {
-    display: inline-block;
+    display: block;
     float: none;
     max-width: 100px;
     max-height: 100px;
     padding: 6px 10px 6px 10px;
-  }
-  .post-preview{
-      text-align: center !important;
   }
 }
 
