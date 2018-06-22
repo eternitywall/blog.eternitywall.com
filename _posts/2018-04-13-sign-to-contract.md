@@ -174,8 +174,8 @@ hence Diana's new coins are as secured as normal coins.
 
 Carl chose a particular nonce that allowed him to commit to a value.
 The resulting singature is indistinguishable from a standard one and has the same security.
-Moreover, if he looses the committed value `c`, 
-then he looses the ability of proving the timestamp,
+Moreover, if he loses the committed value `c`, 
+then he loses the ability of proving the timestamp,
 but he does not compromise any coin: 
 his coins have been already spent and Diana has hers in the desired destination, 
 which is independent from `c`.
